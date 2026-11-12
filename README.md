@@ -1,7 +1,10 @@
 # The Judge desktop companion
 
-Version 0.1.7 has separate production and developer menus. It is a local portable
-build; no GitHub release or installation has been performed.
+Version 0.1.7 has separate production and developer menus. This is a portable
+Windows companion, built independently from this repository.
+
+Download **TheJudge.exe** from [the latest release](https://github.com/BurtFablehoff/TheJudge/releases/latest).
+No installer is required; keep the EXE in a writable folder and run it.
 
 ## Run the production menu
 
@@ -28,10 +31,9 @@ State / Actions / Windows / Quit developer controls and animation review.
 The updater targets **BurtFablehoff/TheJudge**, with a release asset named
 `TheJudge.exe`. It reuses Odin's digest, binary-identity, version, healthy-start and
 rollback checks through an explicit shared-source snapshot. Automatic updates are
-on by default and can be switched off. The repository/first release is still
-pending: the connector returned 404 and GitHub CLI authentication returned 401.
-No repository, remote, commit or release was created. Live update delivery cannot
-be verified until GitHub setup is completed.
+on by default and can be switched off. The updater reads this repository's latest published release. The public source
+package excludes all original reference photos/videos, ZIP files and local
+draft/review folders. Small approval records are retained in `art/approvals/`.
 
 Both variants pass routine, menu/native and product checks and build independently
 from `app/`, `art/` and `build.ps1`. Hidden isolated executable fixtures pass a healthy
@@ -39,7 +41,7 @@ update handoff and failed-health rollback. Tests opened no visible windows and
 wrote no startup entries or owner settings. All five artwork approval snapshots
 are intact; the approved 21-frame pose cycle is pixel- and timing-identical.
 
-Current hashes, checks and remaining live-desktop/GitHub work:
+Current hashes, checks and remaining live-desktop review:
 [build record](planning/current-build.json). Production menu preview:
 `build/production-menu-0.1.7.png`.
 
@@ -192,7 +194,8 @@ not validate native desktop input. No installation/release work is in this scope
 
 ## GitHub publication
 
-The source/runtime-art package is prepared for BurtFablehoff/TheJudge. Original
+Source and finished runtime artwork are published at
+https://github.com/BurtFablehoff/TheJudge. Original
 photos, videos, ZIP and local draft/review folders are excluded from publication.
 Small immutable approval records are exported to art/approvals. The standalone
 build only requires app/, art/ and build.ps1; local artwork-authoring helpers may

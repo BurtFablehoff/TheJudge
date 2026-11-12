@@ -385,3 +385,9 @@ ZIPs, draft sources/review snapshots and working build folders remain local-only
 Small approval records are exported to art/approvals. A standalone clone need
 not have parent AGENTS/workspace/shared documents; local umbrella instructions
 apply to canonical shared authoring when that workspace exists.
+
+Repository created at https://github.com/BurtFablehoff/TheJudge under the verified
+personal account. Original media, draft/review snapshots and build folders stay
+local and ignored; runtime art and small approval records are tracked. Release
+publication is now explicitly authorized by the owner. Preserve the existing
+0.1.7 production EXE bytes for the first release asset TheJudge.exe.

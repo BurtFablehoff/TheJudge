@@ -1,7 +1,7 @@
 {
   "date": "2026-11-11",
   "version": "0.1.7",
-  "status": "production/dev menu implementation tested; owner live check and GitHub repository/release setup pending",
+  "status": "GitHub publication in progress; local checks and artwork approval intact",
   "path": "test-exes/TheJudge-0.1.7.exe",
   "sha256": "b78d8b7001b4b39f3a9ceb72bde8cc8360fb449b1c9385a95b5a269da33aaa4a",
   "bytes": 47045120,
@@ -62,14 +62,12 @@
   "authoring": "Approved render snapshots explicitly exported by tools/Promote-RuntimeArt.ps1. Ordinary build only embeds tracked frames after digest verification.",
   "manualTesting": [
     "Quit the older companion before launching TheJudge-0.1.7.exe; confirm production menu, outside dismissal, dragging and monitor placement.",
-    "Confirm Sit/Lay Down animate normally and autonomous rest/sleep remains active.",
-    "GitHub repository/release setup remains pending; no live update feed has been verified."
+    "Confirm Sit/Lay Down animate normally and autonomous rest/sleep remains active."
   ],
   "limits": [
     "No autonomous travel, perches or directional gaze.",
-    "No external repository, remote, commit, release or installation performed.",
     "Startup supported by production menu, off until explicitly enabled; dev builds never register.",
-    "Live download source remains pending GitHub setup; offline verification and handoff/rollback are tested."
+    "Original reference media and local draft/review folders are not published."
   ],
   "approvals": [
     "draft-assets/approved-sit-v1/approval.json",
@@ -289,12 +287,12 @@
   "repositorySetup": {
     "ownerNamedRepository": "The Judge (TheJudge URL slug)",
     "configuredTarget": "BurtFablehoff/TheJudge",
-    "connectorLookup": "404 / not accessible",
-    "cliAuthentication": "gh api user failed with HTTP 401 Bad credentials",
-    "created": false,
-    "remoteAdded": false,
+    "connectorLookup": "Repository created with the verified personal Git credential",
+    "cliAuthentication": "GitHub CLI stored credential invalid; Git Credential Manager credential validated for BurtFablehoff",
+    "created": true,
+    "remoteAdded": true,
     "published": false,
     "liveFeedVerified": false,
-    "requires": "GitHub authentication and repository/first-release setup before updates can be delivered"
+    "requires": "First release publication and live feed verification in progress"
   }
 }
