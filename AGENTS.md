@@ -391,3 +391,13 @@ personal account. Original media, draft/review snapshots and build folders stay
 local and ignored; runtime art and small approval records are tracked. Release
 publication is now explicitly authorized by the owner. Preserve the existing
 0.1.7 production EXE bytes for the first release asset TheJudge.exe.
+
+GitHub publication completed: public BurtFablehoff/TheJudge, main branch and
+v0.1.7 production release. Asset TheJudge.exe is byte-identical to the tested
+production EXE. The public updater was verified without authentication: a 0.1.6
+fixture client selected 0.1.7, downloaded it, and passed digest/product/version
+checks. No owner companion was updated or installed during verification.
+A clean tracked clone (without ignored references/drafts) passed all checks.
+See planning/github-release-0.1.7.json. Existing live desktop owner checks remain
+separate from successful publication; do not mistake historical auth failures
+above for a current publishing blocker.

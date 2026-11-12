@@ -26,13 +26,18 @@
   "repository": {
     "ownerNamedRepository": "The Judge (TheJudge URL slug)",
     "configuredTarget": "BurtFablehoff/TheJudge",
-    "connectorLookup": "404 / not accessible",
-    "cliAuthentication": "gh api user failed with HTTP 401 Bad credentials",
-    "created": false,
-    "remoteAdded": false,
-    "published": false,
-    "liveFeedVerified": false,
-    "requires": "GitHub authentication and repository/first-release setup before updates can be delivered"
+    "connectorLookup": "Repository created with the verified personal Git credential",
+    "cliAuthentication": "GitHub CLI stored credential invalid; Git Credential Manager credential validated for BurtFablehoff",
+    "created": true,
+    "remoteAdded": true,
+    "published": true,
+    "liveFeedVerified": true,
+    "requires": null,
+    "sourcePushed": true,
+    "public": true,
+    "url": "https://github.com/BurtFablehoff/TheJudge",
+    "release": "https://github.com/BurtFablehoff/TheJudge/releases/tag/v0.1.7",
+    "download": "https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge.exe"
   },
   "checks": {
     "passed": true,
@@ -72,5 +77,20 @@
     "originalRestored": true,
     "networkUsed": false,
     "passed": true
+  },
+  "liveFeedVerification": {
+    "passed": true,
+    "repository": "BurtFablehoff/TheJudge",
+    "fromVersion": "0.1.6",
+    "toVersion": "0.1.7",
+    "publicFeed": true,
+    "authenticationRequired": false,
+    "url": "https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge.exe",
+    "sha256": "b78d8b7001b4b39f3a9ceb72bde8cc8360fb449b1c9385a95b5a269da33aaa4a",
+    "bytes": 47045120,
+    "downloadDigestVerified": true,
+    "productAndVersionVerified": true,
+    "installed": false,
+    "ownerCompanionTouched": false
   }
 }

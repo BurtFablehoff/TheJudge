@@ -200,3 +200,7 @@ photos, videos, ZIP and local draft/review folders are excluded from publication
 Small immutable approval records are exported to art/approvals. The standalone
 build only requires app/, art/ and build.ps1; local artwork-authoring helpers may
 require the ignored draft sources. The intended release asset is TheJudge.exe.
+
+Release v0.1.7 is published. A clean source clone passes all checks, and the public
+update feed has been tested without authentication through an actual verified
+EXE download. Publication details: `planning/github-release-0.1.7.json`.

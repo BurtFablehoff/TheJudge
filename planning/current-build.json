@@ -1,7 +1,7 @@
 {
   "date": "2026-11-11",
   "version": "0.1.7",
-  "status": "GitHub publication in progress; local checks and artwork approval intact",
+  "status": "published on GitHub with verified public update feed; owner live desktop review remains separate",
   "path": "test-exes/TheJudge-0.1.7.exe",
   "sha256": "b78d8b7001b4b39f3a9ceb72bde8cc8360fb449b1c9385a95b5a269da33aaa4a",
   "bytes": 47045120,
@@ -291,8 +291,38 @@
     "cliAuthentication": "GitHub CLI stored credential invalid; Git Credential Manager credential validated for BurtFablehoff",
     "created": true,
     "remoteAdded": true,
-    "published": false,
-    "liveFeedVerified": false,
-    "requires": "First release publication and live feed verification in progress"
+    "published": true,
+    "liveFeedVerified": true,
+    "requires": null,
+    "sourcePushed": true,
+    "public": true,
+    "url": "https://github.com/BurtFablehoff/TheJudge",
+    "release": "https://github.com/BurtFablehoff/TheJudge/releases/tag/v0.1.7",
+    "download": "https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge.exe"
+  },
+  "liveUpdateFeedCheck": {
+    "passed": true,
+    "repository": "BurtFablehoff/TheJudge",
+    "fromVersion": "0.1.6",
+    "toVersion": "0.1.7",
+    "publicFeed": true,
+    "authenticationRequired": false,
+    "url": "https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge.exe",
+    "sha256": "b78d8b7001b4b39f3a9ceb72bde8cc8360fb449b1c9385a95b5a269da33aaa4a",
+    "bytes": 47045120,
+    "downloadDigestVerified": true,
+    "productAndVersionVerified": true,
+    "installed": false,
+    "ownerCompanionTouched": false
+  },
+  "cleanCloneVerification": {
+    "passed": true,
+    "source": "tracked repository clone, no local draft/reference folders",
+    "checks": [
+      "production and developer builds",
+      "routine, native menu/input and product checks",
+      "healthy update handoff and failed-health rollback"
+    ],
+    "pathContainsSpaces": true
   }
 }

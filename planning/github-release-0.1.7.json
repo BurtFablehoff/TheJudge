@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/BurtFablehoff/TheJudge",
+  "release": "https://github.com/BurtFablehoff/TheJudge/releases/tag/v0.1.7",
+  "tag": "v0.1.7",
+  "sourceCommit": "2f1a784d1ac0481fa44e72ead63f02c86384c9c0",
+  "asset": "TheJudge.exe",
+  "sha256": "b78d8b7001b4b39f3a9ceb72bde8cc8360fb449b1c9385a95b5a269da33aaa4a",
+  "bytes": 47045120,
+  "livePublicUpdaterCheck": {
+    "passed": true,
+    "repository": "BurtFablehoff/TheJudge",
+    "fromVersion": "0.1.6",
+    "toVersion": "0.1.7",
+    "publicFeed": true,
+    "authenticationRequired": false,
+    "url": "https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge.exe",
+    "sha256": "b78d8b7001b4b39f3a9ceb72bde8cc8360fb449b1c9385a95b5a269da33aaa4a",
+    "bytes": 47045120,
+    "downloadDigestVerified": true,
+    "productAndVersionVerified": true,
+    "installed": false,
+    "ownerCompanionTouched": false
+  },
+  "originalMediaPublished": false,
+  "localDraftsPublished": false,
+  "cleanCloneVerificationPassed": true
+}
