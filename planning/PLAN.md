@@ -700,3 +700,11 @@ repo slug; production targets BurtFablehoff/TheJudge/TheJudge.exe releases.
 Both local builds and hidden healthy-update/rollback fixtures pass. Source/art
 publishing is not performed; repository setup is pending GitHub authentication.
 See production-menu-v1.json and current-build.json for the reviewable result.
+
+## Installer and README picture
+
+Owner explicitly requested an installer and repository-doc picture. Added an
+Inno per-user setup with shortcuts/uninstall using the already-published 0.1.7
+production binary, plus the approved seated sprite in README. No new artwork or
+app behavior changes. Archive extraction and integrity verify the embedded EXE;
+the installer is not executed on the owner's machine during this work.

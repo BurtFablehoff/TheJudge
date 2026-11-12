@@ -401,3 +401,24 @@ A clean tracked clone (without ignored references/drafts) passed all checks.
 See planning/github-release-0.1.7.json. Existing live desktop owner checks remain
 separate from successful publication; do not mistake historical auth failures
 above for a current publishing blocker.
+
+Owner requested an installer ("dude... where's the installer") after asking for a
+README picture. This authorizes building/publishing a Windows installer, not
+running it on the owner's machine. Installer source: installer/TheJudge.iss;
+packager: tools/Build-Installer.ps1. The per-user install is Programs/TheJudge,
+with its own AppId, production mutex, shortcuts and uninstaller. Startup remains
+opt-in in the companion menu; uninstall removes only the matching quoted TheJudge
+Run entry. Never reuse Odin's installer identity/paths. Compiler is an external
+ISCC tool supplied via -CompilerPath or normal Inno installation discovery; no
+parent/Odin runtime or clone-build dependency. Local packaging used an existing
+read-only compiler. Installer extraction/integrity passed; it was not executed.
+README picture references the already-approved art/frames/sit.png unchanged.
+
+Installer TheJudge-Setup-0.1.7.exe is published on release v0.1.7. Its public
+re-download hash matches the locally verified package, and its extracted payload
+matches TheJudge.exe exactly. Developer EXEs are rejected by the packaging script.
+Updater regression check still selects TheJudge.exe, not the setup asset. The
+installer was NOT run; no local installation/shortcuts/registry changes occurred.
+GitHub CLI direct network calls timed out during this upload; the authenticated
+GitHub REST API via .NET worked. Never print/store credential values. README now
+shows the unchanged approved seated sprite and links the installer first.

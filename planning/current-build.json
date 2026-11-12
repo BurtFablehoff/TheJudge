@@ -1,7 +1,7 @@
 {
   "date": "2026-11-11",
   "version": "0.1.7",
-  "status": "published on GitHub with verified public update feed; owner live desktop review remains separate",
+  "status": "production EXE and per-user installer published; README picture added; owner live desktop review separate",
   "path": "test-exes/TheJudge-0.1.7.exe",
   "sha256": "b78d8b7001b4b39f3a9ceb72bde8cc8360fb449b1c9385a95b5a269da33aaa4a",
   "bytes": 47045120,
@@ -83,7 +83,8 @@
     "Added per-user Start with Windows opt-in via Judge-only Run value; no startup entry written during checks.",
     "Extracted Odin updater into configured canonical shared source; Judge-only GitHub feed, release asset, product checks and update cache.",
     "Verified healthy replacement and failed-health rollback using hidden isolated executables, without touching owner companion or registry.",
-    "Production/dev menu, routine, native, updater/startup and standalone checks pass; approved 21-frame artwork/timings are pixel-identical."
+    "Production/dev menu, routine, native, updater/startup and standalone checks pass; approved 21-frame artwork/timings are pixel-identical.",
+    "Added per-user Inno installer with shortcuts/uninstall and optional desktop shortcut; verified archive, exact production payload and published download without running installer. Added approved portrait to README."
   ],
   "hiddenDesktopChecks": {
     "passed": true,
@@ -324,5 +325,37 @@
       "healthy update handoff and failed-health rollback"
     ],
     "pathContainsSpaces": true
+  },
+  "installer": {
+    "installerExecuted": false,
+    "passed": true,
+    "requiresAdministrator": false,
+    "perUser": true,
+    "archiveIntegrityPassed": true,
+    "installed": false,
+    "registryWritten": false,
+    "installer": "TheJudge-Setup-0.1.7.exe",
+    "payloadMatchesPublishedPortable": true,
+    "bytes": 45375486,
+    "payloadSha256": "b78d8b7001b4b39f3a9ceb72bde8cc8360fb449b1c9385a95b5a269da33aaa4a",
+    "sha256": "e92e48b39a0ff790cc198ce051c6e8b609a307286671256db4e4730a08c3e1db",
+    "uninstallProvided": true,
+    "compiler": "Inno Setup 7.1.1",
+    "appId": "{A967887A-7911-43EA-BC40-ABF89FF3E4D5}",
+    "source": "installer/TheJudge.iss",
+    "builder": "tools/Build-Installer.ps1",
+    "installDirectory": "%LOCALAPPDATA%\\Programs\\TheJudge",
+    "startMenuShortcut": true,
+    "optionalDesktopShortcut": true,
+    "startupOptInViaCompanionMenu": true,
+    "download": "https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge-Setup-0.1.7.exe",
+    "published": true,
+    "publicDownloadVerified": true,
+    "developmentBuildRejected": true
+  },
+  "readmePicture": {
+    "path": "art/frames/sit.png",
+    "unchangedApprovedArtwork": true,
+    "width": 280
   }
 }

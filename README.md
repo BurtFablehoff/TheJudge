@@ -1,10 +1,15 @@
 # The Judge desktop companion
 
+<p align="center">
+  <img src="art/frames/sit.png" alt="The Judge sitting" width="280">
+</p>
+
 Version 0.1.7 has separate production and developer menus. This is a portable
 Windows companion, built independently from this repository.
 
-Download **TheJudge.exe** from [the latest release](https://github.com/BurtFablehoff/TheJudge/releases/latest).
-No installer is required; keep the EXE in a writable folder and run it.
+Download [**TheJudge-Setup-0.1.7.exe**](https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge-Setup-0.1.7.exe) for the Windows installer. It installs for your user, adds a Start-menu shortcut and an uninstaller, and offers an optional desktop shortcut. No administrator rights are required.
+
+Prefer a portable copy? Download [**TheJudge.exe**](https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge.exe), keep it in a writable folder, and run it.
 
 ## Run the production menu
 
@@ -204,3 +209,16 @@ require the ignored draft sources. The intended release asset is TheJudge.exe.
 Release v0.1.7 is published. A clean source clone passes all checks, and the public
 update feed has been tested without authentication through an actual verified
 EXE download. Publication details: `planning/github-release-0.1.7.json`.
+
+## Build the installer
+
+Use an existing Inno Setup compiler (ISCC.exe), then run:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Build-Installer.ps1 -CompilerPath "C:\path\to\ISCC.exe"
+```
+
+The script builds the production app and packages `build/release/TheJudge-Setup-0.1.7.exe`.
+It never runs the installer. The per-user install folder is `%LOCALAPPDATA%\Programs\TheJudge`.
+Start with Windows remains an option in the companion menu. Uninstall removes only
+this installation's matching startup entry and preserves unrelated applications.
