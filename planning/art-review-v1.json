@@ -1,0 +1,90 @@
+{
+  "status": "owner-approved",
+  "reference": "draft-assets/approved-sit-v1/sit.png",
+  "scaleMethod": "manual bounded dark-eye landmarks; Euclidean eye/eyelid centre span; uniform whole-sprite display scaling",
+  "sit": {
+    "eyes": [
+      [
+        446.69,
+        280.98
+      ],
+      [
+        606.58,
+        290.77
+      ]
+    ],
+    "eyeSpan": 160.1894384783217,
+    "relativeScale": 1,
+    "supportY": 1232
+  },
+  "lay": {
+    "eyes": [
+      [
+        346.25,
+        475.47
+      ],
+      [
+        464.68,
+        489.16
+      ]
+    ],
+    "eyeSpan": 119.21862690032964,
+    "relativeScale": 1.3436611596965036,
+    "supportY": 976
+  },
+  "sleep": {
+    "eyes": [
+      [
+        259.45,
+        757.87
+      ],
+      [
+        379.13,
+        755.64
+      ]
+    ],
+    "eyeSpan": 119.70077401587679,
+    "relativeScale": 1.3382489778810838,
+    "supportY": 903,
+    "limitation": "Closed eyelids and changed head pitch make this a starting scale estimate requiring visual review."
+  },
+  "blink": {
+    "sources": [
+      "draft-assets/lay-v2/lay.png",
+      "draft-assets/lay-blink-v1/early.png",
+      "draft-assets/lay-blink-v1/late.png",
+      "draft-assets/sleep-v1/sleep.png"
+    ],
+    "sequence": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      0
+    ],
+    "eyeMasks": [
+      {
+        "cx": 346,
+        "cy": 477,
+        "rx": 36,
+        "ry": 27
+      },
+      {
+        "cx": 465,
+        "cy": 490,
+        "rx": 36,
+        "ry": 28
+      }
+    ],
+    "featherFraction": 0.2,
+    "body": "exact base pixels outside eye masks",
+    "alpha": "base alpha unchanged"
+  },
+  "reviewExe": "test-exes/Judge-ArtReview-v1.exe",
+  "reviewStill": "build/art-review-v1.png",
+  "reviewBlink": "build/blink-review-v1.gif",
+  "ownerWords": "pass great job!",
+  "approvalRecord": "draft-assets/approved-rest-v1/approval.json"
+}

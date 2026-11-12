@@ -1,0 +1,695 @@
+{
+  "schema": 1,
+  "identity": "TheJudgeCompanionDevV1",
+  "frames": {
+    "lay-blink-1": {
+      "file": "frames/lay-blink-1.png",
+      "sha256": "af4569f2024aa7de5e4c8d0c24abbe54335f4f0a1d671278e7e10996502f4bd9",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        252,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": false
+    },
+    "lay-blink-2": {
+      "file": "frames/lay-blink-2.png",
+      "sha256": "beb484d70f09bf846cd18e9b91930a5433353f0f1351424bd36759509c62107e",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        252,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": false
+    },
+    "lay-blink-3": {
+      "file": "frames/lay-blink-3.png",
+      "sha256": "1a3121853e6f3e074a29911670dc40dec9b857107450b3efd864889b4588e863",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        252,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": false
+    },
+    "lay": {
+      "file": "frames/lay.png",
+      "sha256": "5f1e9df1668428413027aa78d1467b01b7dfa265a47ebcfbca8eea64c7c91288",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        252,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": false,
+      "hasBodyAnchor": true,
+      "bodyAnchorX": 857.6
+    },
+    "lick-1": {
+      "file": "frames/lick-1.png",
+      "sha256": "c6b54edad1de28b6d3b11eebb53e8db44ef79e0a040c478e1e3389549ad6a899",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        194,
+        19,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "lick-2": {
+      "file": "frames/lick-2.png",
+      "sha256": "1f02f280a06f8c1df93eebb14cdedfb32c45336dc094e59c6f2069b98c7d230c",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        194,
+        19,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "lick-3": {
+      "file": "frames/lick-3.png",
+      "sha256": "11b193e4b5e3566c2c018c3d6d340f308ce951d47d66de7cc6c6bddd8de19b58",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        194,
+        19,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "sit-blink-closed": {
+      "file": "frames/sit-blink-closed.png",
+      "sha256": "e5ce9e933110396ff50757d3612b2736bbcce60baa93aae48ab5a8aa739e1596",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        194,
+        19,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "sit-blink-half": {
+      "file": "frames/sit-blink-half.png",
+      "sha256": "9938c492fb7e64409d19bd381a76091886d9bb54f9ac5fbd1f6745a9a1cfea81",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        194,
+        19,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "sit-lay-early": {
+      "file": "frames/sit-lay-early.png",
+      "sha256": "5edd3d6050d0f5fb43464a58e0093ce9fa7d4d744971328e2b8a7a36365bc707",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        86,
+        84,
+        1220,
+        1121
+      ],
+      "scale": 1.0295098239819713,
+      "supportX": 433.80801507075194,
+      "supportY": 1120,
+      "draft": true
+    },
+    "sit-lay-late": {
+      "file": "frames/sit-lay-late.png",
+      "sha256": "a2f9db52fd78469e7b332acd0073973e12fbec75c3eaf6fffc09a349c2609667",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        27,
+        181,
+        1230,
+        1064
+      ],
+      "scale": 1.11859866410756,
+      "supportX": 406.58905264321277,
+      "supportY": 1062,
+      "draft": true
+    },
+    "sit-lay-mid": {
+      "file": "frames/sit-lay-mid.png",
+      "sha256": "31b558aea91e3c7901e84d104406918eba355425d434fe32ad2a51f1af691059",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        62,
+        126,
+        1212,
+        1056
+      ],
+      "scale": 1.05437075924421,
+      "supportX": 434.060733698812,
+      "supportY": 1055,
+      "draft": true
+    },
+    "sit": {
+      "file": "frames/sit.png",
+      "sha256": "d8f519721121b8d4262c8e4ef720e985966d3f6c2409c017ea84454050e24e27",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        194,
+        19,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "sleep": {
+      "file": "frames/sleep.png",
+      "sha256": "bca999947723c7022de331e23af1ab112e8cd2e650d8aa66b6e5dddb1f270d02",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        15,
+        484,
+        1228,
+        907
+      ],
+      "scale": 1.2764781017116784,
+      "supportX": 448.26842105263154,
+      "supportY": 903,
+      "draft": false,
+      "hasBodyAnchor": true,
+      "bodyAnchorX": 924.2
+    },
+    "smile-1": {
+      "file": "frames/smile-1.png",
+      "sha256": "82ed5752567c3050bf24ca84060699e5fedd83a3bb82ce2fe46e7950994156c9",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        207,
+        146,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "smile-2": {
+      "file": "frames/smile-2.png",
+      "sha256": "8e8942fbf87830a902b80b0454c936f2228a2799f88cd2cdd8af8efbdaa13997",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        228,
+        173,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "tilt-1": {
+      "file": "frames/tilt-1.png",
+      "sha256": "3508b2c40d368ea1615871273268b2cc885aeabafc96155aaaba9076a1fcf521",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        211,
+        11,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "tilt-2": {
+      "file": "frames/tilt-2.png",
+      "sha256": "d7afd2b585b16bd5e1a1b0605ac312b088e52015d93893d18efd863b0252e460",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        235,
+        7,
+        1131,
+        1236
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232,
+      "draft": false
+    },
+    "lay-lick-1": {
+      "file": "frames/lay-lick-1.png",
+      "sha256": "697b1a8e4905aeb78cf5f970ec18f808115871bc8a09d56596d5aedf8896fe68",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        252,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": true,
+      "reviewStatus": "lying-expression-candidate"
+    },
+    "lay-lick-2": {
+      "file": "frames/lay-lick-2.png",
+      "sha256": "ccfaa7a165d63d84fafe865814f6a2772ae18ff6244478bbae4f18306237925d",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        252,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": true,
+      "reviewStatus": "lying-expression-candidate"
+    },
+    "lay-lick-3": {
+      "file": "frames/lay-lick-3.png",
+      "sha256": "467dad3ece62ba07c5d550e06690d61ed8760da56aae7d0038f0d78bb6cf061b",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        252,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": true,
+      "reviewStatus": "lying-expression-candidate"
+    },
+    "lay-smile-1": {
+      "file": "frames/lay-smile-1.png",
+      "sha256": "0ab23fdda8a9aebadb1e55502703d3adc208010270da7774aa2a1f0dd1cada64",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        342,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": true,
+      "reviewStatus": "lying-expression-candidate"
+    },
+    "lay-smile-2": {
+      "file": "frames/lay-smile-2.png",
+      "sha256": "3a37ea9ce24989532363841fed830006ed9202d1624d48f87ffc28d5fac68013",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        396,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": true,
+      "reviewStatus": "lying-expression-candidate"
+    },
+    "lay-tilt-1": {
+      "file": "frames/lay-tilt-1.png",
+      "sha256": "baf1f72229fced06e8eebc56293f1100c81c74e9871f2f056ddfbdb1a7264a5c",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        251,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": true,
+      "reviewStatus": "lying-expression-candidate"
+    },
+    "lay-tilt-2": {
+      "file": "frames/lay-tilt-2.png",
+      "sha256": "975888cc2665333457165961f713a3d6bcfc26cba43a4ca0a7f964d4fffc47c4",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        103,
+        241,
+        1175,
+        981
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976,
+      "draft": true,
+      "reviewStatus": "lying-expression-candidate"
+    },
+    "lay-sleep-nod": {
+      "file": "frames/lay-sleep-nod-v2.png",
+      "sha256": "c300487adbd6ce401640193357174685e206bb37304f7841aa60461b7dfbde29",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        104,
+        313,
+        1177,
+        981
+      ],
+      "scale": 1.3392082666132694,
+      "supportX": 404.3616424831892,
+      "supportY": 976,
+      "draft": true,
+      "reviewStatus": "ear-detail-repair-candidate",
+      "hasBodyAnchor": true,
+      "bodyAnchorX": 858.0
+    },
+    "lay-sleep-early": {
+      "file": "frames/lay-sleep-early-v2.png",
+      "sha256": "54a6c7b491437732eb1645028be2269e61b40bdc323b086387ef9d97db58fcee",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        69,
+        364,
+        1213,
+        954
+      ],
+      "scale": 1.276714586075785,
+      "supportX": 451.15657730778287,
+      "supportY": 949,
+      "draft": true,
+      "reviewStatus": "ear-detail-repair-candidate",
+      "hasBodyAnchor": true,
+      "bodyAnchorX": 927.0
+    },
+    "lay-sleep-mid": {
+      "file": "frames/lay-sleep-mid-v2.png",
+      "sha256": "151bf83d686da19b14a232e030c188777976da8c3c94d2718465850d3ab9596f",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        57,
+        447,
+        1194,
+        933
+      ],
+      "scale": 1.2764781017116784,
+      "supportX": 439.0684210526315,
+      "supportY": 928,
+      "draft": true,
+      "reviewStatus": "ear-detail-repair-candidate",
+      "hasBodyAnchor": true,
+      "bodyAnchorX": 915.0
+    },
+    "lay-sleep-late": {
+      "file": "frames/lay-sleep-late-v2.png",
+      "sha256": "2570553b77cb547f4ec21f6ac424bc01be275ed288c93540443d2c47f7a6f274",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        24,
+        486,
+        1232,
+        910
+      ],
+      "scale": 1.2764781017116784,
+      "supportX": 447.76842105263154,
+      "supportY": 905,
+      "draft": true,
+      "reviewStatus": "ear-detail-repair-candidate",
+      "hasBodyAnchor": true,
+      "bodyAnchorX": 923.7
+    }
+  },
+  "clips": {
+    "tilt": {
+      "frames": [
+        "tilt-1",
+        "tilt-2",
+        "tilt-1"
+      ],
+      "seconds": [
+        0.12,
+        2,
+        0.12
+      ],
+      "pose": "sit",
+      "draft": false,
+      "peakHoldMin": 2,
+      "peakHoldMax": 8
+    },
+    "smile": {
+      "frames": [
+        "smile-1",
+        "smile-2",
+        "smile-1"
+      ],
+      "seconds": [
+        0.12,
+        2,
+        0.12
+      ],
+      "pose": "sit",
+      "draft": false,
+      "peakHoldMin": 2,
+      "peakHoldMax": 8
+    },
+    "lick": {
+      "frames": [
+        "lick-1",
+        "lick-2",
+        "lick-3"
+      ],
+      "seconds": [
+        0.18,
+        0.24,
+        0.18
+      ],
+      "pose": "sit",
+      "draft": false
+    },
+    "lay-blink": {
+      "frames": [
+        "lay-blink-1",
+        "lay-blink-2",
+        "lay-blink-3",
+        "lay-blink-2",
+        "lay-blink-1"
+      ],
+      "seconds": [
+        0.055,
+        0.055,
+        0.08,
+        0.055,
+        0.055
+      ],
+      "pose": "lay",
+      "draft": false
+    },
+    "sit-blink": {
+      "frames": [
+        "sit-blink-half",
+        "sit-blink-closed",
+        "sit-blink-half"
+      ],
+      "seconds": [
+        0.09,
+        0.11,
+        0.09
+      ],
+      "pose": "sit",
+      "draft": false
+    },
+    "sit-to-lay": {
+      "frames": [
+        "sit-lay-early",
+        "sit-lay-mid",
+        "sit-lay-late"
+      ],
+      "seconds": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "pose": "sit",
+      "draft": true
+    },
+    "lay-to-sit": {
+      "frames": [
+        "sit-lay-late",
+        "sit-lay-mid",
+        "sit-lay-early"
+      ],
+      "seconds": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "pose": "lay",
+      "draft": true
+    },
+    "lay-tilt": {
+      "frames": [
+        "lay-tilt-1",
+        "lay-tilt-2",
+        "lay-tilt-1"
+      ],
+      "seconds": [
+        0.12,
+        2,
+        0.12
+      ],
+      "pose": "lay",
+      "draft": true,
+      "peakHoldMin": 2,
+      "peakHoldMax": 8,
+      "reviewStatus": "candidate-enabled-for-development-review"
+    },
+    "lay-smile": {
+      "frames": [
+        "lay-smile-1",
+        "lay-smile-2",
+        "lay-smile-1"
+      ],
+      "seconds": [
+        0.12,
+        2,
+        0.12
+      ],
+      "pose": "lay",
+      "draft": true,
+      "peakHoldMin": 2,
+      "peakHoldMax": 8,
+      "reviewStatus": "candidate-enabled-for-development-review"
+    },
+    "lay-lick": {
+      "frames": [
+        "lay-lick-1",
+        "lay-lick-2",
+        "lay-lick-3"
+      ],
+      "seconds": [
+        0.18,
+        0.24,
+        0.18
+      ],
+      "pose": "lay",
+      "draft": true,
+      "reviewStatus": "candidate-enabled-for-development-review"
+    },
+    "lay-to-sleep": {
+      "frames": [
+        "lay-blink-1",
+        "lay-sleep-nod",
+        "lay-sleep-early",
+        "lay-sleep-mid",
+        "lay-sleep-late"
+      ],
+      "seconds": [
+        0.1,
+        0.14,
+        0.2,
+        0.22,
+        0.26
+      ],
+      "pose": "lay",
+      "draft": true,
+      "reviewStatus": "candidate-enabled-for-development-review"
+    },
+    "sleep-to-lay": {
+      "frames": [
+        "lay-sleep-late",
+        "lay-sleep-mid",
+        "lay-sleep-early",
+        "lay-sleep-nod",
+        "lay-blink-1"
+      ],
+      "seconds": [
+        0.16,
+        0.18,
+        0.16,
+        0.12,
+        0.1
+      ],
+      "pose": "sleep",
+      "draft": true,
+      "reviewStatus": "candidate-enabled-for-development-review"
+    }
+  },
+  "approvals": [
+    "../draft-assets/approved-sit-v1/approval.json",
+    "../draft-assets/approved-rest-v1/approval.json",
+    "../draft-assets/approved-actions-v1/approval.json",
+    "../draft-assets/approved-sit-blink-v1/approval.json"
+  ],
+  "note": "Owner: all four expressions operate in each awake pose; tilt/smile sample one 2-8 second peak hold per invocation. Lying expression art is a development candidate; sit/lie transition gate remains independent."
+}

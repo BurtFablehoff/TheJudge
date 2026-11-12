@@ -1,0 +1,165 @@
+{
+  "status": "owner-approved",
+  "reference": "draft-assets/approved-sit-v1/sit.png",
+  "keyRegistration": [
+    {
+      "file": "sit-tilt-v1/mid.png",
+      "uniformHeadScale": 1.033617,
+      "additionalRollDegrees": -3.3,
+      "manualDarkEyeCentres": [
+        [
+          470.81,
+          290.95
+        ],
+        [
+          621.05,
+          328.99
+        ]
+      ],
+      "method": "uniform scale from approved sitting eye span, no deformation; translation/neck registration in tools/ActionReview.cs",
+      "limitation": "Eye narrowing and muzzle pitch still require visual review; numeric span does not certify likeness."
+    },
+    {
+      "file": "sit-tilt-v1/peak.png",
+      "uniformHeadScale": 1.012529,
+      "additionalRollDegrees": 0,
+      "manualDarkEyeCentres": [
+        [
+          465.22,
+          301.03
+        ],
+        [
+          615.35,
+          350.96
+        ]
+      ],
+      "method": "uniform scale from approved sitting eye span, no deformation; translation/neck registration in tools/ActionReview.cs",
+      "limitation": "Eye narrowing and muzzle pitch still require visual review; numeric span does not certify likeness."
+    },
+    {
+      "file": "sit-smile-v1/mid.png",
+      "uniformHeadScale": 0.993683,
+      "additionalRollDegrees": 0,
+      "manualDarkEyeCentres": [
+        [
+          447.22,
+          277.6
+        ],
+        [
+          608.16,
+          287.01
+        ]
+      ],
+      "method": "uniform scale from approved sitting eye span, no deformation; translation/neck registration in tools/ActionReview.cs",
+      "limitation": "Eye narrowing and muzzle pitch still require visual review; numeric span does not certify likeness."
+    },
+    {
+      "file": "sit-smile-v1/peak.png",
+      "uniformHeadScale": 0.969114,
+      "additionalRollDegrees": 0,
+      "manualDarkEyeCentres": [
+        [
+          464.21,
+          255.41
+        ],
+        [
+          628.9,
+          269.5
+        ]
+      ],
+      "method": "uniform scale from approved sitting eye span, no deformation; translation/neck registration in tools/ActionReview.cs",
+      "limitation": "Eye narrowing and muzzle pitch still require visual review; numeric span does not certify likeness."
+    },
+    {
+      "file": "sit-lick-v1/start.png",
+      "uniformHeadScale": 1.006802,
+      "additionalRollDegrees": 0,
+      "manualDarkEyeCentres": [
+        [
+          447.51,
+          283.93
+        ],
+        [
+          606.37,
+          292.77
+        ]
+      ],
+      "method": "uniform scale from approved sitting eye span, no deformation; translation/neck registration in tools/ActionReview.cs",
+      "limitation": "Eye narrowing and muzzle pitch still require visual review; numeric span does not certify likeness."
+    },
+    {
+      "file": "sit-lick-v1/peak.png",
+      "uniformHeadScale": 1.026332,
+      "additionalRollDegrees": 0,
+      "manualDarkEyeCentres": [
+        [
+          446.58,
+          301.36
+        ],
+        [
+          602.44,
+          309.8
+        ]
+      ],
+      "method": "uniform scale from approved sitting eye span, no deformation; translation/neck registration in tools/ActionReview.cs",
+      "limitation": "Eye narrowing and muzzle pitch still require visual review; numeric span does not certify likeness."
+    },
+    {
+      "file": "sit-lick-v1/return.png",
+      "uniformHeadScale": 0.994197,
+      "additionalRollDegrees": 0,
+      "manualDarkEyeCentres": [
+        [
+          446.04,
+          281.16
+        ],
+        [
+          606.84,
+          291.32
+        ]
+      ],
+      "method": "uniform scale from approved sitting eye span, no deformation; translation/neck registration in tools/ActionReview.cs",
+      "limitation": "Eye narrowing and muzzle pitch still require visual review; numeric span does not certify likeness."
+    }
+  ],
+  "bodyInvariant": "Pixels at native y >= 560 are exactly the approved sit; floor support remains 1232.",
+  "headJoin": "Full generated head above row 500, premultiplied feather 500-559 to unchanged neck/collar/body.",
+  "lickJoin": "Only feathered eyelid and muzzle regions; base alpha unchanged.",
+  "cycleSeconds": 3.6,
+  "tiltSmile": {
+    "sequence": [
+      0,
+      1,
+      2,
+      1,
+      0
+    ],
+    "changeSeconds": [
+      2,
+      2.12,
+      3,
+      3.12
+    ]
+  },
+  "lick": {
+    "sequence": [
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "changeSeconds": [
+      2,
+      2.08,
+      2.16,
+      2.24
+    ]
+  },
+  "reviewExe": "test-exes/Judge-ActionReview-v1.exe",
+  "reviewStill": "build/action-review-v1.png",
+  "reviewAnimation": "build/actions-review-v1.gif",
+  "checkReport": "build/action-review-v1.json",
+  "ownerWords": "perfect",
+  "approvalRecord": "draft-assets/approved-actions-v1/approval.json"
+}

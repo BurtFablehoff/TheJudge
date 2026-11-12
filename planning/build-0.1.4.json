@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-11",
+  "version": "0.1.4",
+  "status": "in progress: owner review of lying/sleep transition candidates and desktop behavior pending",
+  "path": "test-exes/TheJudge-Dev-0.1.4.exe",
+  "sha256": "36acc858ba3049ad515ead4490fbe23aaf941f05ab94b10586839adb366b6dda",
+  "bytes": 45680640,
+  "headlessChecks": {
+    "passed": true,
+    "allAwakeActionCases": 160,
+    "sleepTransitionPaths": 20,
+    "observedMinimumPeakHold": 2.099030023486833,
+    "observedMaximumPeakHold": 7.982263454227831,
+    "holdsSampledOnce": true,
+    "noseLickSeconds": 0.6,
+    "version": "0.1.4",
+    "embeddedFrames": 29,
+    "geometryPlacements": 870,
+    "simulatedHours": 96,
+    "restFraction": 0.948756076399536,
+    "stateChanges": 1481,
+    "actions": 20728,
+    "approvedSitBlinkEnabledByDefault": true,
+    "automaticSitBlinksInTwoMinutes": 7,
+    "approvedBodiesAndBlinkAlphaUnchanged": true,
+    "sleepBlocksExpressions": true,
+    "sitLieDraftsOffByDefault": true,
+    "sleepTransitionPreviewEnabledByDefault": true,
+    "pauseAndMenuDragSuppression": true,
+    "wakeToAwakeLying": true,
+    "cacheLimit": 6,
+    "taskbarOrderCases": 8,
+    "alphaHitTest": true,
+    "identityIsolated": true,
+    "uiOpened": false,
+    "registryWritten": false,
+    "networkUsed": false,
+    "manualReviewRequired": "Layered window, dragging, tray/menu, mixed-DPI monitors and candidate sit/lie/sleep transitions"
+  },
+  "standaloneBuild": {
+    "passed": true,
+    "version": "0.1.4",
+    "checks": [
+      "self-test",
+      "test-desktop"
+    ],
+    "inputs": [
+      "app/",
+      "art/",
+      "build.ps1"
+    ],
+    "pathContainsSpaces": true,
+    "parentDependencies": false,
+    "referenceArchiveRequired": false
+  },
+  "authoring": "Approved render snapshots explicitly exported by tools/Promote-RuntimeArt.ps1. Ordinary build only embeds tracked frames after digest verification.",
+  "manualTesting": [
+    "Quit the old companion and launch 0.1.4. In State choose Lying awake, then Sleeping, then Lying awake.",
+    "State > Review poses and actions > Loop lie / sleep repeatedly previews lowering and waking.",
+    "Review the new intermediate head/neck/paw motion in build/lay-sleep-0.1.4.gif.",
+    "Visible desktop input, dragging and mixed-DPI behavior remain owner checks."
+  ],
+  "limits": [
+    "No autonomous travel, perches, directional gaze or updater.",
+    "No startup registration or installation.",
+    "Sit/lie transitions remain draft and are disabled by default; seated blink is approved and enabled.",
+    "Four lying/sleep intermediate drawings are development candidates, enabled by default via Windows > Sleep transitions (preview)."
+  ],
+  "approvals": [
+    "draft-assets/approved-sit-v1/approval.json",
+    "draft-assets/approved-rest-v1/approval.json",
+    "draft-assets/approved-actions-v1/approval.json",
+    "draft-assets/approved-sit-blink-v1/approval.json"
+  ],
+  "changes": [
+    "Four new imagegen intermediate drawings: subtle nod, early lowering, halfway, nearly resting. Existing endpoints and all approved snapshots unchanged.",
+    "Lying/sleep motion takes 0.92 seconds down and 0.72 seconds up, includes an existing early blink key.",
+    "Sit-to-sleep and sleep-to-sit chain through lying; existing sit/lie draft switch remains independent.",
+    "Actions cannot interrupt posture transitions; pause/menu/drag freeze their progress.",
+    "Review window adds Loop lie / sleep. Windows adds Sleep transitions (preview), on by default in this development build.",
+    "20 posture-route checks, 870 placements, 96 simulated hours, 23 menu wiring checks, existing native input checks and isolated standalone checks pass."
+  ],
+  "hiddenDesktopChecks": {
+    "passed": true,
+    "menuChecks": 23,
+    "menuAndGestureCases": 21,
+    "fullBodyHitRegions": 8,
+    "managedClientMatchesWholeSprite": true,
+    "hiddenNativeUploads": 206,
+    "movedHitTestPositions": 3,
+    "negativeScreenCoordinates": true,
+    "windowStyles": true,
+    "transparentHitTest": true,
+    "opaqueHitTest": true,
+    "mouseActivationSuppressed": true,
+    "gdiObjectsBefore": 28,
+    "gdiObjectsAfter": 28,
+    "foregroundUnchanged": true,
+    "visibleWindowsOpened": false,
+    "trayIconShown": false,
+    "userSettingsWritten": false,
+    "manualStillRequired": "Owner feel/appearance of visible companion, actual drag/drop input and mixed-DPI monitor changes"
+  },
+  "transitionReview": {
+    "gif": "build/sit-lie-review-v1.gif",
+    "frameSource": "actual runtime Placement.Paint",
+    "frames": 9,
+    "delaysMs": [
+      1000,
+      120,
+      120,
+      120,
+      1000,
+      120,
+      120,
+      120,
+      1000
+    ],
+    "ownerApproved": false
+  },
+  "awakeActionReview": {
+    "gif": "build/awake-actions-0.1.3.gif",
+    "stills": "build/awake-action-review/peaks.png",
+    "previewPeakHoldSeconds": 3,
+    "runtimePeakHoldSeconds": [
+      2,
+      8
+    ],
+    "lyingArtworkOwnerApproved": false
+  },
+  "sleepTransitionReview": {
+    "gif": "build/lay-sleep-0.1.4.gif",
+    "stages": "build/sleep-transition-review/stages.png",
+    "ownerApproved": false,
+    "downSeconds": 0.92,
+    "upSeconds": 0.72,
+    "intermediates": 4,
+    "frameSource": "actual runtime Placement.Paint",
+    "promptsAndGeneration": "draft-assets/lay-sleep-v1/generation.json"
+  }
+}

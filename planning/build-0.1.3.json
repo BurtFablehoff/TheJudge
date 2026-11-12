@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-11",
+  "version": "0.1.3",
+  "status": "in progress: owner desktop input, lying expressions and transition review pending",
+  "path": "test-exes/TheJudge-Dev-0.1.3.exe",
+  "sha256": "f6cc51e4bc3e8fa119b9a0afc80398f38253ae97c3cb546bac3db56687c09310",
+  "bytes": 41835008,
+  "headlessChecks": {
+    "passed": true,
+    "allAwakeActionCases": 160,
+    "observedMinimumPeakHold": 2.099030023486833,
+    "observedMaximumPeakHold": 7.982263454227831,
+    "holdsSampledOnce": true,
+    "noseLickSeconds": 0.6,
+    "version": "0.1.3",
+    "embeddedFrames": 25,
+    "geometryPlacements": 750,
+    "simulatedHours": 96,
+    "restFraction": 0.9500737847325955,
+    "stateChanges": 1348,
+    "actions": 20222,
+    "approvedSitBlinkEnabledByDefault": true,
+    "automaticSitBlinksInTwoMinutes": 7,
+    "approvedBodiesAndBlinkAlphaUnchanged": true,
+    "sleepBlocksExpressions": true,
+    "draftsOffByDefault": true,
+    "pauseAndMenuDragSuppression": true,
+    "wakeToAwakeLying": true,
+    "cacheLimit": 6,
+    "taskbarOrderCases": 8,
+    "alphaHitTest": true,
+    "identityIsolated": true,
+    "uiOpened": false,
+    "registryWritten": false,
+    "networkUsed": false,
+    "manualReviewRequired": "Layered window, dragging, tray/menu, mixed-DPI monitors and draft sit/lie transitions"
+  },
+  "standaloneBuild": {
+    "passed": true,
+    "version": "0.1.3",
+    "checks": [
+      "self-test",
+      "test-desktop"
+    ],
+    "inputs": [
+      "app/",
+      "art/",
+      "build.ps1"
+    ],
+    "pathContainsSpaces": true,
+    "parentDependencies": false,
+    "referenceArchiveRequired": false
+  },
+  "authoring": "Approved render snapshots explicitly exported by tools/Promote-RuntimeArt.ps1. Ordinary build only embeds tracked frames after digest verification.",
+  "manualTesting": [
+    "Quit the older companion and launch 0.1.3; check body/paw/tail clicks and outside-menu dismissal.",
+    "Review all four actions in Sit and Lie; tilt/smile hold 2-8 seconds once per invocation, lick lasts 0.60 seconds.",
+    "Review new lying expression artwork and the existing draft sit/lie transitions.",
+    "Confirm dragging and mixed-DPI monitor behavior on the actual desktop."
+  ],
+  "limits": [
+    "No autonomous travel, perches, directional gaze or updater.",
+    "No startup registration or installation.",
+    "Direct awake/sleep pose change; no new sleep lowering animation.",
+    "Sit/lie transitions remain draft and are disabled by default; seated blink is approved and enabled."
+  ],
+  "approvals": [
+    "draft-assets/approved-sit-v1/approval.json",
+    "draft-assets/approved-rest-v1/approval.json",
+    "draft-assets/approved-actions-v1/approval.json",
+    "draft-assets/approved-sit-blink-v1/approval.json"
+  ],
+  "changes": [
+    "Whole opaque companion opens menu by left/right click; left drag preserved. Managed client size matches full sprite.",
+    "Outside-menu clicks close all open branches; root menu is State / Actions (in current state) / Windows / Quit with separators.",
+    "All four actions available in either awake pose; manual actions can interrupt a held expression. Sleep blocks actions.",
+    "Tilt and smile independently sample one 2-8 second peak hold; slower nose lick uses 0.18/0.24/0.18 second keys.",
+    "New lying tilt/smile/lick candidates use fixed approved body; awaiting artwork approval.",
+    "21 menu wiring checks, 21 pointer/menu cases, 8 body hit regions and 206 hidden native uploads pass.",
+    "Standalone build and checks pass with only app, art and build.ps1 in a path with spaces. All four approved snapshots verified unchanged."
+  ],
+  "hiddenDesktopChecks": {
+    "passed": true,
+    "menuChecks": 21,
+    "menuAndGestureCases": 21,
+    "fullBodyHitRegions": 8,
+    "managedClientMatchesWholeSprite": true,
+    "hiddenNativeUploads": 206,
+    "movedHitTestPositions": 3,
+    "negativeScreenCoordinates": true,
+    "windowStyles": true,
+    "transparentHitTest": true,
+    "opaqueHitTest": true,
+    "mouseActivationSuppressed": true,
+    "gdiObjectsBefore": 28,
+    "gdiObjectsAfter": 28,
+    "foregroundUnchanged": true,
+    "visibleWindowsOpened": false,
+    "trayIconShown": false,
+    "userSettingsWritten": false,
+    "manualStillRequired": "Owner feel/appearance of visible companion, actual drag/drop input and mixed-DPI monitor changes"
+  },
+  "transitionReview": {
+    "gif": "build/sit-lie-review-v1.gif",
+    "frameSource": "actual runtime Placement.Paint",
+    "frames": 9,
+    "delaysMs": [
+      1000,
+      120,
+      120,
+      120,
+      1000,
+      120,
+      120,
+      120,
+      1000
+    ],
+    "ownerApproved": false
+  },
+  "awakeActionReview": {
+    "gif": "build/awake-actions-0.1.3.gif",
+    "stills": "build/awake-action-review/peaks.png",
+    "previewPeakHoldSeconds": 3,
+    "runtimePeakHoldSeconds": [
+      2,
+      8
+    ],
+    "lyingArtworkOwnerApproved": false
+  }
+}

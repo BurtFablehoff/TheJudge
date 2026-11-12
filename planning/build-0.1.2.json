@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-11",
+  "version": "0.1.2",
+  "status": "in progress: transition motion and visible desktop review pending",
+  "path": "test-exes/TheJudge-Dev-0.1.2.exe",
+  "sha256": "1762d67db4fff959ec63216e0072b3e46b5049af442185796d9ea2e5a0356ef9",
+  "bytes": 32967680,
+  "headlessChecks": {
+    "passed": true,
+    "version": "0.1.2",
+    "embeddedFrames": 18,
+    "geometryPlacements": 540,
+    "simulatedHours": 96,
+    "restFraction": 0.9807144097262293,
+    "stateChanges": 1419,
+    "actions": 18640,
+    "approvedSitBlinkEnabledByDefault": true,
+    "automaticSitBlinksInTwoMinutes": 6,
+    "approvedBodiesAndBlinkAlphaUnchanged": true,
+    "sleepBlocksExpressions": true,
+    "draftsOffByDefault": true,
+    "pauseAndMenuDragSuppression": true,
+    "wakeToAwakeLying": true,
+    "cacheLimit": 6,
+    "taskbarOrderCases": 8,
+    "alphaHitTest": true,
+    "identityIsolated": true,
+    "uiOpened": false,
+    "registryWritten": false,
+    "networkUsed": false,
+    "manualReviewRequired": "Layered window, dragging, tray/menu, mixed-DPI monitors and draft sit/lie transitions"
+  },
+  "standaloneBuild": {
+    "passed": true,
+    "version": "0.1.2",
+    "checks": [
+      "self-test",
+      "test-desktop"
+    ],
+    "inputs": [
+      "app/",
+      "art/",
+      "build.ps1"
+    ],
+    "pathContainsSpaces": true,
+    "parentDependencies": false,
+    "referenceArchiveRequired": false
+  },
+  "authoring": "Approved render snapshots explicitly exported by tools/Promote-RuntimeArt.ps1. Ordinary build only embeds tracked frames after digest verification.",
+  "manualTesting": [
+    "Review build/sit-lie-review-v1.gif and approve or correct the sit/lie motion",
+    "Quit older companion and launch 0.1.2; confirm visible dragging, menus and monitor behavior",
+    "Review window: enable Loop sit / lie; native tests do not replace visible mixed-DPI checks"
+  ],
+  "limits": [
+    "No autonomous travel, perches, directional gaze or updater.",
+    "No startup registration or installation.",
+    "Direct awake/sleep pose change; no new sleep lowering animation.",
+    "Sit/lie transitions remain draft and are disabled by default; seated blink is approved and enabled."
+  ],
+  "approvals": [
+    "draft-assets/approved-sit-v1/approval.json",
+    "draft-assets/approved-rest-v1/approval.json",
+    "draft-assets/approved-actions-v1/approval.json",
+    "draft-assets/approved-sit-blink-v1/approval.json"
+  ],
+  "changes": [
+    "Fixed native sprite hit targets and z-order bounds to use uploaded scene position instead of stale Form.Bounds.",
+    "Added 16 isolated menu wiring checks, 204 hidden native uploads, negative-coordinate hit tests, focus/style and GDI lifetime checks.",
+    "Double-buffered the review panel and added Loop sit / lie.",
+    "Added runtime-based transition GIF preview; approval remains pending.",
+    "Extracted verified reusable GIF exporter to canonical shared tooling with explicit local snapshot.",
+    "All passed artwork snapshots and older executables unchanged."
+  ],
+  "hiddenDesktopChecks": {
+    "passed": true,
+    "menuChecks": 16,
+    "hiddenNativeUploads": 204,
+    "movedHitTestPositions": 3,
+    "negativeScreenCoordinates": true,
+    "windowStyles": true,
+    "transparentHitTest": true,
+    "opaqueHitTest": true,
+    "mouseActivationSuppressed": true,
+    "gdiObjectsBefore": 28,
+    "gdiObjectsAfter": 28,
+    "foregroundUnchanged": true,
+    "visibleWindowsOpened": false,
+    "trayIconShown": false,
+    "userSettingsWritten": false,
+    "manualStillRequired": "Owner feel/appearance of visible companion, actual drag/drop input and mixed-DPI monitor changes"
+  },
+  "transitionReview": {
+    "gif": "build/sit-lie-review-v1.gif",
+    "frameSource": "actual runtime Placement.Paint",
+    "frames": 9,
+    "delaysMs": [
+      1000,
+      120,
+      120,
+      120,
+      1000,
+      120,
+      120,
+      120,
+      1000
+    ],
+    "ownerApproved": false
+  }
+}

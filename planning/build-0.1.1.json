@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-11",
+  "version": "0.1.1",
+  "status": "approved seated blink enabled; portable development build ready for desktop testing",
+  "path": "test-exes/TheJudge-Dev-0.1.1.exe",
+  "sha256": "0e2d4b60a3bcc858ca99b362719c6616fcca054aee6d5dd28658d04b89c50af2",
+  "bytes": 32955392,
+  "headlessChecks": {
+    "passed": true,
+    "version": "0.1.1",
+    "embeddedFrames": 18,
+    "geometryPlacements": 540,
+    "simulatedHours": 96,
+    "restFraction": 0.9807144097262293,
+    "stateChanges": 1419,
+    "actions": 18640,
+    "approvedSitBlinkEnabledByDefault": true,
+    "automaticSitBlinksInTwoMinutes": 6,
+    "approvedBodiesAndBlinkAlphaUnchanged": true,
+    "sleepBlocksExpressions": true,
+    "draftsOffByDefault": true,
+    "pauseAndMenuDragSuppression": true,
+    "wakeToAwakeLying": true,
+    "cacheLimit": 6,
+    "taskbarOrderCases": 8,
+    "alphaHitTest": true,
+    "identityIsolated": true,
+    "uiOpened": false,
+    "registryWritten": false,
+    "networkUsed": false,
+    "manualReviewRequired": "Layered window, dragging, tray/menu, mixed-DPI monitors and draft sit/lie transitions"
+  },
+  "standaloneBuild": {
+    "passed": true,
+    "version": "0.1.1",
+    "inputs": [
+      "app/",
+      "art/",
+      "build.ps1"
+    ],
+    "pathContainsSpaces": true,
+    "parentDependencies": false,
+    "referenceArchiveRequired": false
+  },
+  "authoring": "Approved render snapshots explicitly exported by tools/Promote-RuntimeArt.ps1. Ordinary build only embeds tracked frames after digest verification.",
+  "manualTesting": [
+    "Quit old companion, launch 0.1.1 and inspect seated blinking",
+    "Desktop drag/menu/tray/mixed-DPI checks remain pending",
+    "Sit/lie transition candidates remain unapproved"
+  ],
+  "limits": [
+    "No autonomous travel, perches, directional gaze or updater.",
+    "No startup registration or installation.",
+    "Direct awake/sleep pose change; no new sleep lowering animation.",
+    "Sit/lie transitions remain draft and are disabled by default; seated blink is approved and enabled."
+  ],
+  "approvals": [
+    "draft-assets/approved-sit-v1/approval.json",
+    "draft-assets/approved-rest-v1/approval.json",
+    "draft-assets/approved-actions-v1/approval.json",
+    "draft-assets/approved-sit-blink-v1/approval.json"
+  ],
+  "changes": [
+    "Corrected seated blink passed: pass.",
+    "Approved seated blink now runs normally in Sit without draft gate.",
+    "Draft switch controls only sit/lie transitions.",
+    "All artwork pixels unchanged; previous executable retained."
+  ]
+}

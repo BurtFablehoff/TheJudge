@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-11",
+  "ownerWords": "pass",
+  "scope": "Corrected seated half/closed blink frames, identical outer body/alpha and eye-only composites as presented in sit-blink-v2. Does not approve sit/lie transition candidates or untested desktop behavior.",
+  "files": {
+    "half.png": "draft-assets/sit-blink-v2/half.png",
+    "closed.png": "draft-assets/sit-blink-v2/closed.png",
+    "review.json": "draft-assets/sit-blink-v2/review.json",
+    "comparison.png": "build/runtime-review/draft-sit-blink.png"
+  },
+  "sha256": {
+    "half.png": "9938c492fb7e64409d19bd381a76091886d9bb54f9ac5fbd1f6745a9a1cfea81",
+    "closed.png": "e5ce9e933110396ff50757d3612b2736bbcce60baa93aae48ab5a8aa739e1596",
+    "review.json": "a511aa369c04bd041e8bf6226b2886c7667361ec1a6fadeaa6e342fa87d5755a",
+    "comparison.png": "5de4412cc48e97a4567b2f926e06a0a63c145b3269fa8e89032a0ffcf0bb7dc5"
+  }
+}

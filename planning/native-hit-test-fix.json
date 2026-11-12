@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-11",
+  "trigger": "Hidden native probe exposed a missed opaque hit target.",
+  "before": "Uploaded scene at (100,100), managed Form.Bounds still (0,0,300,300); opaque WM_NCHITTEST returned -1.",
+  "after": "Canonical LayeredSpriteWindow caches actual uploaded hitOrigin/PresentedBounds; hittest and taskbar bounds use it.",
+  "canonical": "shared/framework/LayeredSpriteWindow.cs",
+  "consumer": "thejudge/app/SharedLayeredSpriteWindow.cs",
+  "version": "0.1.2",
+  "checked": "Positive and negative monitor positions, opaque/client and transparent/pass-through hits, nonactivation, stable GDI object count.",
+  "odinChanged": false
+}

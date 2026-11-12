@@ -1,0 +1,208 @@
+[
+  {
+    "stage": "nod",
+    "changedPixels": 88950,
+    "changesOutsideEarMasks": 0,
+    "bodyFacePawsTailPreserved": true,
+    "polygons": [
+      [
+        130,
+        290,
+        355,
+        290,
+        375,
+        420,
+        330,
+        485,
+        300,
+        540,
+        245,
+        620,
+        135,
+        620
+      ],
+      [
+        450,
+        325,
+        700,
+        325,
+        700,
+        630,
+        535,
+        630,
+        525,
+        560,
+        485,
+        510,
+        440,
+        465
+      ]
+    ],
+    "independentlyVerifiedOutsideEarChanges": 0,
+    "gdiRasterizationBoundaryTolerancePixels": 1,
+    "lowerBodyBelow835Exact": true,
+    "faceCoreExact": true,
+    "faceCoreRectangle": [
+      305,
+      540,
+      490,
+      720
+    ]
+  },
+  {
+    "stage": "early",
+    "changedPixels": 108423,
+    "changesOutsideEarMasks": 0,
+    "bodyFacePawsTailPreserved": true,
+    "polygons": [
+      [
+        40,
+        335,
+        340,
+        335,
+        350,
+        440,
+        302,
+        472,
+        255,
+        545,
+        225,
+        635,
+        100,
+        670,
+        40,
+        650
+      ],
+      [
+        405,
+        370,
+        690,
+        370,
+        700,
+        675,
+        505,
+        675,
+        490,
+        585,
+        440,
+        545,
+        420,
+        480
+      ]
+    ],
+    "independentlyVerifiedOutsideEarChanges": 0,
+    "gdiRasterizationBoundaryTolerancePixels": 1,
+    "lowerBodyBelow835Exact": true,
+    "faceCoreExact": true,
+    "faceCoreRectangle": [
+      245,
+      580,
+      445,
+      755
+    ]
+  },
+  {
+    "stage": "mid",
+    "changedPixels": 111900,
+    "changesOutsideEarMasks": 0,
+    "bodyFacePawsTailPreserved": true,
+    "polygons": [
+      [
+        25,
+        415,
+        315,
+        415,
+        320,
+        515,
+        285,
+        570,
+        240,
+        635,
+        200,
+        720,
+        70,
+        725,
+        25,
+        665
+      ],
+      [
+        385,
+        435,
+        680,
+        435,
+        680,
+        730,
+        490,
+        730,
+        465,
+        655,
+        420,
+        590,
+        390,
+        545
+      ]
+    ],
+    "independentlyVerifiedOutsideEarChanges": 0,
+    "gdiRasterizationBoundaryTolerancePixels": 1,
+    "lowerBodyBelow835Exact": true,
+    "faceCoreExact": true,
+    "faceCoreRectangle": [
+      260,
+      660,
+      425,
+      810
+    ]
+  },
+  {
+    "stage": "late",
+    "changedPixels": 125059,
+    "changesOutsideEarMasks": 0,
+    "bodyFacePawsTailPreserved": true,
+    "polygons": [
+      [
+        0,
+        505,
+        285,
+        505,
+        305,
+        590,
+        270,
+        655,
+        225,
+        715,
+        175,
+        820,
+        30,
+        830,
+        0,
+        765
+      ],
+      [
+        395,
+        520,
+        685,
+        520,
+        685,
+        815,
+        525,
+        815,
+        495,
+        755,
+        440,
+        690,
+        405,
+        630
+      ]
+    ],
+    "independentlyVerifiedOutsideEarChanges": 0,
+    "gdiRasterizationBoundaryTolerancePixels": 1,
+    "lowerBodyBelow835Exact": true,
+    "faceCoreExact": true,
+    "faceCoreRectangle": [
+      240,
+      740,
+      430,
+      860
+    ]
+  }
+]

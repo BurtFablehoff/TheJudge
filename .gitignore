@@ -1,0 +1,14 @@
+/local-data/
+/*.zip
+/build/
+/test-exes/
+__pycache__/
+*.pyc
+*.log
+
+# Local authoring sources and review snapshots; runtime art is tracked.
+/draft-assets/
+/art/frames/lay-sleep-early.png
+/art/frames/lay-sleep-late.png
+/art/frames/lay-sleep-mid.png
+/art/frames/lay-sleep-nod.png

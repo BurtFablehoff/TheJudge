@@ -1,0 +1,41 @@
+{
+  "namespace": "PetFramework",
+  "sync": "../shared/tools/Sync-Framework.ps1 -Pet thejudge",
+  "implicitBuildSync": false,
+  "snapshots": [
+    {
+      "snapshot": "app/SharedLayeredSpriteWindow.cs",
+      "canonical": "shared/framework/LayeredSpriteWindow.cs",
+      "sha256": "ec9b6073695cd682dd7c3477856e839810b149da400dd29f23e2ec02fa5a8e7c"
+    },
+    {
+      "snapshot": "app/SharedSpriteSupport.cs",
+      "canonical": "shared/framework/SpriteSupport.cs",
+      "sha256": "574f5178be30874234dec8a0789f61371cf99fdd2f94a4b7c31bdee24bd586c4"
+    },
+    {
+      "snapshot": "app/SharedTaskbarOrder.cs",
+      "canonical": "shared/framework/TaskbarOrder.cs",
+      "sha256": "132e8fb50e6baf8e630296d752a261df8336888c1e65be9fa5c2fc1f867db2fc"
+    },
+    {
+      "snapshot": "app/SharedWindowsStartup.cs",
+      "canonical": "shared/framework/WindowsStartup.cs",
+      "sha256": "7f2cf05753a2334bd6593242d3d00644157150d27d200e6f79f6d88eabc3b51d"
+    },
+    {
+      "snapshot": "app/SharedReleaseUpdater.cs",
+      "canonical": "shared/framework/ReleaseUpdater.cs",
+      "sha256": "65612a707993de8c98e46c193133b086b67dc34129b06636ff1e529687e70ecb"
+    }
+  ],
+  "provenance": "Layered upload and nonactivation flags adapted from Odin/app/Desktop.cs; taskbar decision from Odin/app/TaskbarOrder.cs. Judge-specific controls, behavior, identity and artwork remain here. Odin unchanged. WindowsStartup and ReleaseUpdater extracted from Odin/app/WindowsStartup.cs and AutoUpdater.cs, parameterized by consumer identity. Only Judge consumes the new snapshots; Odin unchanged.",
+  "validation": "Both production/dev: 29 embedded frames, 870 placements, 180 fixed rear-body placements, 160 awake actions, 20 sleep routes, 96 simulated hours, native/menu checks, startup isolation, updater parsing/digest/URL checks. Hidden executable healthy handoff and failed-health rollback passed. Both standalone variants pass. Approved cycle pixels/timing unchanged.",
+  "toolSnapshots": [
+    {
+      "snapshot": "tools/SharedWrite-AnimatedGif.ps1",
+      "canonical": "shared/tools/Write-AnimatedGif.ps1",
+      "sha256": "e2d5fe12e930751742ffb7aae061ca69c656a7bb6135f1ff46fa58c47f80ff4d"
+    }
+  ]
+}

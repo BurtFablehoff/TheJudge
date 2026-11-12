@@ -1,0 +1,130 @@
+{
+  "status": "candidate enabled for development review",
+  "ownerApproved": false,
+  "base": "art/frames/lay.png",
+  "registration": {
+    "lay-tilt-v1/mid": {
+      "centres": [
+        [
+          345.97411541201615,
+          472.91921950447244
+        ],
+        [
+          462.01528905876734,
+          500.30113364895976
+        ]
+      ],
+      "scale": 0.9999211311651902,
+      "midpoint": [
+        403.99470223539174,
+        486.61017657671607
+      ]
+    },
+    "lay-tilt-v1/peak": {
+      "centres": [
+        [
+          354.48152499797425,
+          465.39729357426467
+        ],
+        [
+          468.4478682427945,
+          502.9830876167707
+        ]
+      ],
+      "scale": 0.9934533972427277,
+      "midpoint": [
+        411.4646966203844,
+        484.1901905955177
+      ]
+    },
+    "lay-smile-v1/mid": {
+      "centres": [
+        [
+          346.84857495768335,
+          477.71215517635756
+        ],
+        [
+          464.82295759041,
+          489.1070816963836
+        ]
+      ],
+      "scale": 1.0058656293893165,
+      "midpoint": [
+        405.8357662740467,
+        483.4096184363706
+      ]
+    },
+    "lay-smile-v1/peak": {
+      "centres": [
+        [
+          348.8583905177792,
+          475.3849656893325
+        ],
+        [
+          476.65448532451427,
+          486.50938404299296
+        ]
+      ],
+      "scale": 0.9293671694850794,
+      "midpoint": [
+        412.7564379211467,
+        480.94717486616275
+      ]
+    },
+    "lay-lick-v1/start": {
+      "centres": [
+        [
+          345.5035858604245,
+          475.37667916560486
+        ],
+        [
+          464.0309523809524,
+          488.5879464285714
+        ]
+      ],
+      "scale": 0.999641607700417,
+      "midpoint": [
+        404.7672691206884,
+        481.9823127970881
+      ]
+    },
+    "lay-lick-v1/peak": {
+      "centres": [
+        [
+          348.7749841671944,
+          479.8376820772641
+        ],
+        [
+          463.0598105156578,
+          490.8691690171404
+        ]
+      ],
+      "scale": 1.0383450098681966,
+      "midpoint": [
+        405.91739734142607,
+        485.3534255472023
+      ]
+    },
+    "lay-lick-v1/return": {
+      "centres": [
+        [
+          345.61640239420353,
+          476.03892330848123
+        ],
+        [
+          465.0365869883365,
+          489.0639496208258
+        ]
+      ],
+      "scale": 0.9924266846199581,
+      "midpoint": [
+        405.32649469127,
+        482.55143646465353
+      ]
+    }
+  },
+  "authoring": "tools/Build-LayExpressions.cs; explicit export, never run at build time",
+  "preservation": "Tilt/smile preserve all pixels below y=680; nose lick preserves full alpha and pixels outside local eye/muzzle masks. Pose scale/support unchanged.",
+  "timing": "Tilt/smile peak sampled once in [2,8] seconds; entry/return 0.12 seconds each. Lick 0.18/0.24/0.18 seconds.",
+  "review": "build/awake-actions-0.1.3.gif"
+}

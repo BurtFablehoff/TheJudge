@@ -1,0 +1,157 @@
+{
+  "date": "2026-11-11",
+  "version": "0.1.6",
+  "status": "implementation and pose-cycle visual review passed; final live desktop smoke test unconfirmed",
+  "path": "test-exes/TheJudge-Dev-0.1.6.exe",
+  "sha256": "115b3fe50d4d9a71227d10b27c6c494a80e49a0fbf815a411b9ed4b54abc8d6e",
+  "bytes": 47006208,
+  "headlessChecks": {
+    "passed": true,
+    "allAwakeActionCases": 160,
+    "sleepTransitionPaths": 20,
+    "observedMinimumPeakHold": 2.099030023486833,
+    "observedMaximumPeakHold": 7.982263454227831,
+    "holdsSampledOnce": true,
+    "noseLickSeconds": 0.6,
+    "version": "0.1.6",
+    "embeddedFrames": 29,
+    "geometryPlacements": 870,
+    "stationaryRearBodyPlacements": 180,
+    "simulatedHours": 96,
+    "restFraction": 0.948756076399536,
+    "stateChanges": 1481,
+    "actions": 20728,
+    "approvedSitBlinkEnabledByDefault": true,
+    "automaticSitBlinksInTwoMinutes": 7,
+    "approvedBodiesAndBlinkAlphaUnchanged": true,
+    "sleepBlocksExpressions": true,
+    "sitLieTransitionsEnabledByDefault": true,
+    "sleepTransitionPreviewEnabledByDefault": true,
+    "pauseAndMenuDragSuppression": true,
+    "wakeToAwakeLying": true,
+    "cacheLimit": 6,
+    "taskbarOrderCases": 8,
+    "alphaHitTest": true,
+    "identityIsolated": true,
+    "uiOpened": false,
+    "registryWritten": false,
+    "networkUsed": false,
+    "manualReviewRequired": "Layered window, dragging, tray/menu, mixed-DPI monitors and candidate sit/lie/sleep transitions"
+  },
+  "standaloneBuild": {
+    "passed": true,
+    "version": "0.1.6",
+    "checks": [
+      "self-test",
+      "test-desktop"
+    ],
+    "inputs": [
+      "app/",
+      "art/",
+      "build.ps1"
+    ],
+    "pathContainsSpaces": true,
+    "parentDependencies": false,
+    "referenceArchiveRequired": false
+  },
+  "authoring": "Approved render snapshots explicitly exported by tools/Promote-RuntimeArt.ps1. Ordinary build only embeds tracked frames after digest verification.",
+  "manualTesting": [
+    "Final actual EXE smoke test: whole-body menu opening, outside-click dismissal, dragging and screen placement (including mixed-DPI if used). Visual cycle is now passed."
+  ],
+  "limits": [
+    "No autonomous travel, perches, directional gaze or updater.",
+    "No startup registration or installation.",
+    "Sit/lie and sleep cycle visually passed; live desktop input/monitor verification is not established by the GIF review."
+  ],
+  "approvals": [
+    "draft-assets/approved-sit-v1/approval.json",
+    "draft-assets/approved-rest-v1/approval.json",
+    "draft-assets/approved-actions-v1/approval.json",
+    "draft-assets/approved-sit-blink-v1/approval.json",
+    "draft-assets/approved-pose-cycle-v1/approval.json"
+  ],
+  "changes": [
+    "Sit/lie transition keys restored to normal flow: now enabled by default, with Windows > Sit / lie transitions switch.",
+    "Replaced moving-muzzle horizontal anchoring with a consistent rear-paw landmark through lying/sleep.",
+    "Uniform body scale normalized: nod uses 0.996686 of awake scale, later keys and sleep use about 0.95; floor support rows retained.",
+    "Owner-requested display registration correction supersedes prior sleep display scale, while all approved artwork/source snapshots remain unchanged.",
+    "All PNG pixels, including corrected ears, are unchanged from 0.1.5.",
+    "Added 180 stationary rear-body placement checks, explicit default sit/lie route checks, and a complete runtime pose-cycle GIF.",
+    "Runtime, menu/native, standalone and shared snapshot checks pass; actual posture appearance remains an owner visual check."
+  ],
+  "hiddenDesktopChecks": {
+    "passed": true,
+    "menuChecks": 23,
+    "menuAndGestureCases": 21,
+    "fullBodyHitRegions": 8,
+    "managedClientMatchesWholeSprite": true,
+    "hiddenNativeUploads": 206,
+    "movedHitTestPositions": 3,
+    "negativeScreenCoordinates": true,
+    "windowStyles": true,
+    "transparentHitTest": true,
+    "opaqueHitTest": true,
+    "mouseActivationSuppressed": true,
+    "gdiObjectsBefore": 28,
+    "gdiObjectsAfter": 28,
+    "foregroundUnchanged": true,
+    "visibleWindowsOpened": false,
+    "trayIconShown": false,
+    "userSettingsWritten": false,
+    "manualStillRequired": "Owner feel/appearance of visible companion, actual drag/drop input and mixed-DPI monitor changes"
+  },
+  "transitionReview": {
+    "gif": "build/sit-lie-review-v1.gif",
+    "frameSource": "actual runtime Placement.Paint",
+    "frames": 9,
+    "delaysMs": [
+      1000,
+      120,
+      120,
+      120,
+      1000,
+      120,
+      120,
+      120,
+      1000
+    ],
+    "ownerApproved": true,
+    "approval": "draft-assets/approved-pose-cycle-v1/approval.json"
+  },
+  "awakeActionReview": {
+    "gif": "build/awake-actions-0.1.3.gif",
+    "stills": "build/awake-action-review/peaks.png",
+    "previewPeakHoldSeconds": 3,
+    "runtimePeakHoldSeconds": [
+      2,
+      8
+    ],
+    "lyingArtworkOwnerApproved": false
+  },
+  "sleepTransitionReview": {
+    "gif": "build/lay-sleep-0.1.6.gif",
+    "stages": "build/sleep-transition-review-v3/stages.png",
+    "ownerApproved": true,
+    "downSeconds": 0.92,
+    "upSeconds": 0.72,
+    "intermediates": 4,
+    "frameSource": "actual runtime Placement.Paint",
+    "promptsAndGeneration": "draft-assets/lay-sleep-v2/generation.json",
+    "earCloseups": [
+      "build/sleep-ear-nod-0.1.5.png",
+      "build/sleep-ear-early-0.1.5.png",
+      "build/sleep-ear-mid-0.1.5.png",
+      "build/sleep-ear-late-0.1.5.png"
+    ],
+    "earPreservationChecks": "planning/sleep-ear-repair-checks.json",
+    "registration": "planning/body-registration-v3.json",
+    "approval": "draft-assets/approved-pose-cycle-v1/approval.json"
+  },
+  "poseCycleReview": {
+    "gif": "build/pose-cycle-0.1.6.gif",
+    "frames": 21,
+    "timingSource": "runtime clip manifest",
+    "ownerApproved": true,
+    "approval": "draft-assets/approved-pose-cycle-v1/approval.json"
+  }
+}

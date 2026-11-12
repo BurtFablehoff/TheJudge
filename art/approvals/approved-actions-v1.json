@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-11",
+  "ownerWords": "perfect",
+  "scope": "All three seated actions (head tilt, cheesy ears-back smile, nose lick) as rendered in Judge-ActionReview-v1, shown in the last full-body still and animated GIF. Includes registration, masks, approved seated body/scale and action timing.",
+  "files": {
+    "ActionReview.cs": "tools/ActionReview.cs",
+    "Build-ArtReview.ps1": "tools/Build-ArtReview.ps1",
+    "registration.json": "planning/action-review-v1.json",
+    "review.png": "build/action-review-v1.png",
+    "actions.gif": "build/actions-review-v1.gif",
+    "checks.json": "build/action-review-v1.json",
+    "Judge-ActionReview-v1.exe": "test-exes/Judge-ActionReview-v1.exe",
+    "sit-tilt-v1-mid.png": "draft-assets/sit-tilt-v1/mid.png",
+    "sit-tilt-v1-peak.png": "draft-assets/sit-tilt-v1/peak.png",
+    "sit-smile-v1-mid.png": "draft-assets/sit-smile-v1/mid.png",
+    "sit-smile-v1-peak.png": "draft-assets/sit-smile-v1/peak.png",
+    "sit-lick-v1-start.png": "draft-assets/sit-lick-v1/start.png",
+    "sit-lick-v1-peak.png": "draft-assets/sit-lick-v1/peak.png",
+    "sit-lick-v1-return.png": "draft-assets/sit-lick-v1/return.png"
+  },
+  "sha256": {
+    "ActionReview.cs": "f7e22c9275e0e6eb1e35114a52f2cbb7b368c71a1ec8229c6635d72ac1ec3972",
+    "Build-ArtReview.ps1": "9f3bbee0811e1539098848e94cf25a10bed113c400ba1c759793b5d97851ae81",
+    "registration.json": "6e2634789cd6481b7effd856b070e0ea798904979493469fa135e5c876c12a91",
+    "review.png": "040031b6e1ed7d2f648610106676a7efc757f9e57951b59b283be37866d5c7ea",
+    "actions.gif": "324e21d6eee8a5bf44654358fe2b435bac66e27c84b6f999e5d2df1b922eaeeb",
+    "checks.json": "437064a69d8d0062fbd0ad7f2f67ffb9d391ece36be2e5bed4e7cf098ac3a00a",
+    "Judge-ActionReview-v1.exe": "99d58bcb5e209d03248c342bda0992ec230b1f6cb0929cc2c043d110d24a4931",
+    "sit-tilt-v1-mid.png": "1d8e23eb332f7a51a922f60480a0edb6c0216bd1830a7e5c91532d56c1c6433a",
+    "sit-tilt-v1-peak.png": "bbe5f566247635e33e26d38e561c1808e6ae279e65c9b33927c972d3a3a0fedc",
+    "sit-smile-v1-mid.png": "5754b9014d057ffd97287959d137ecbc8dbd1e1d0eb6e7473ce806991307bd94",
+    "sit-smile-v1-peak.png": "eee4ad889779758899f175df6f23b9f5307f9f1f2d159ec0baba1b713297c554",
+    "sit-lick-v1-start.png": "14c0e8f2d2999b0e053e7edaa1019526cb79eebeabc1732b2ed1a434d79c595c",
+    "sit-lick-v1-peak.png": "46eeef1a010938284e0f7b4f2936614481ac2f6d91fb3899504588057ea057be",
+    "sit-lick-v1-return.png": "881e19ba58179427325abc4ff2796842155ab13c02e6f8bc7dd0f1cc782a9cc0"
+  }
+}

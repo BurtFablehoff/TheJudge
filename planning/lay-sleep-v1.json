@@ -1,0 +1,111 @@
+{
+  "status": "candidate enabled for development review",
+  "ownerApproved": false,
+  "existingEndpointsUnchanged": true,
+  "authoring": "Four built-in imagegen intermediate PNGs copied byte-for-byte into runtime assets; no synthetic crossfade or source bitmap modifications.",
+  "placement": "Constant physical scale interpolated from approved endpoints; visible paw support is alpha bottom minus 5 pixels, matching the endpoint convention; horizontal support follows muzzle centre.",
+  "downSeconds": 0.92,
+  "upSeconds": 0.72,
+  "down": "lay -> early blink -> nod -> early lowering -> halfway -> nearly resting -> sleep",
+  "up": "sleep -> nearly resting -> halfway -> early lowering -> nod -> early blink -> lay",
+  "route": "Sit/sleep routes via lying; uses existing sit/lie keys when their separate draft switch is enabled.",
+  "review": "build/lay-sleep-0.1.4.gif",
+  "frames": [
+    {
+      "stage": "nod",
+      "source": "draft-assets/lay-sleep-v1/nod.png",
+      "runtime": "art/frames/lay-sleep-nod.png",
+      "sha256": "6db11d0eda63ec8864d7fae83aa5c28fe6db1bd0b744027d0b77f72ec16f16a8",
+      "prompt": "Use case: identity-preserve. Edit target image 1: approved lying-awake golden dog. Supporting reference image 2: the same dog after lowering his head farther. Produce ONE early nod animation key strictly BETWEEN these two. Preserve image 1's full body, tail, hind legs, front paw positions, photographic fur rendering, collar/tag, head SIZE and camera. Move ONLY head/upper neck: lower the face a small amount, about 50 pixels on the 1254-square canvas, chin still well above the forepaws, neck still mostly upright but gently bending forward. Nose should be about y=600 (image 1 nose around y=540), much HIGHER than image 2 nose around y=700. Slightly drowsy eyelids, ears mostly upright as image 1. Same head width as image 1, do not enlarge or squash it. This is a subtle beginning nod, not near sleep. Preserve body's placement, original front paws, back and tail silhouette as closely as possible. Same 1254-square canvas and margins, no zoom or recentering. One dog only, no ghosting/doubled limbs, no tongue or smile, no text, no background/floor/shadow, actual transparency.\n",
+      "placement": {
+        "file": "frames/lay-sleep-nod.png",
+        "sha256": "6db11d0eda63ec8864d7fae83aa5c28fe6db1bd0b744027d0b77f72ec16f16a8",
+        "width": 1254,
+        "height": 1254,
+        "bounds": [
+          104,
+          314,
+          1177,
+          981
+        ],
+        "scale": 1.3428493324241906,
+        "supportX": 385,
+        "supportY": 976,
+        "draft": true,
+        "reviewStatus": "sleep-transition-candidate"
+      }
+    },
+    {
+      "stage": "early",
+      "source": "draft-assets/lay-sleep-v1/early.png",
+      "runtime": "art/frames/lay-sleep-early.png",
+      "sha256": "43e721229334244db514823b1dc22f347dac50cbcb8b2b91d42db62d5e8c4d68",
+      "prompt": "Use case: identity-preserve. Asset: one transparent desktop dog animation sprite, EARLY transition key (25% of the motion) between image 1 lying awake and image 2 head-down sleep. Image 1 is the starting pose/edit target, image 2 is the final pose reference. Draw exactly the same golden long-haired small dog, same photographic cutout rendering, brown collar and black bone tag, same camera angle, same head/body size, same 1254-square framing with generous transparent margins. He remains lying on his belly with hindquarters and curled tail resting on the ground. Lower his head about one quarter of the way from upright toward resting on his front paws; neck gently bends forward/down; ears begin relaxing and eyelids become slightly heavy. Forepaws begin drawing inward a little toward the sleep endpoint, chest sinks slightly. His nose must be visibly lower than awake image 1, but still far above the paws. Keep rear body and tail close to image 1, only slightly settling toward image 2. No standing/sitting, no smiling or tongue, no extra legs, no double exposure or ghosting, no text, no floor/background/shadow. One full dog sprite only. Preserve correct physical proportions and fine fur edges. Real transparent background.\n",
+      "placement": {
+        "file": "frames/lay-sleep-early.png",
+        "sha256": "43e721229334244db514823b1dc22f347dac50cbcb8b2b91d42db62d5e8c4d68",
+        "width": 1254,
+        "height": 1254,
+        "bounds": [
+          76,
+          368,
+          1213,
+          954
+        ],
+        "scale": 1.3417668960611067,
+        "supportX": 340,
+        "supportY": 949,
+        "draft": true,
+        "reviewStatus": "sleep-transition-candidate"
+      }
+    },
+    {
+      "stage": "mid",
+      "source": "draft-assets/lay-sleep-v1/mid.png",
+      "runtime": "art/frames/lay-sleep-mid.png",
+      "sha256": "533abcb706dbce9e95de9b2ab2fd096507891b17a2a07e0af53a03f526bbbf41",
+      "prompt": "Use case: identity-preserve. Asset: one transparent desktop dog animation sprite, MIDDLE transition key (50% of the motion) between image 1 lying awake and image 2 head-down sleep. Image 1 is the starting pose/edit target, image 2 is the final pose reference. Exactly same golden long-haired dog, same photographic cutout rendering, brown collar and black bone tag, same camera angle, same head/body size, same 1254-square framing with generous transparent margins. Keep lying body supported by ground. Neck bends and chest settles until the head is HALFWAY lowered toward the forepaws; nose halfway between its upright and sleeping heights; eyes mostly closed/drowsy. Ears relax outward slightly. Front paws gently draw inward to nearly the position in image 2, head still clearly above them, chin NOT touching the paws yet. Rear body/hindquarters/tail settle halfway from image 1 toward image 2. Must depict a natural intermediate anatomical pose, not a blend of two pictures. No standing/sitting, no tongue/smile, no duplicated limbs, no ghosting, no text/background/floor/shadow. One full dog sprite, correct physical proportions, fine fur, real transparent background.\n",
+      "placement": {
+        "file": "frames/lay-sleep-mid.png",
+        "sha256": "533abcb706dbce9e95de9b2ab2fd096507891b17a2a07e0af53a03f526bbbf41",
+        "width": 1254,
+        "height": 1254,
+        "bounds": [
+          58,
+          447,
+          1194,
+          933
+        ],
+        "scale": 1.3404138506072516,
+        "supportX": 326,
+        "supportY": 928,
+        "draft": true,
+        "reviewStatus": "sleep-transition-candidate"
+      }
+    },
+    {
+      "stage": "late",
+      "source": "draft-assets/lay-sleep-v1/late.png",
+      "runtime": "art/frames/lay-sleep-late.png",
+      "sha256": "4f3f3b6179ff2f755861c349d4223944ffc97d9c9155abdde0a8b798da10916f",
+      "prompt": "Use case: identity-preserve. Asset: one transparent desktop dog animation sprite, LATE transition key (75% of the motion) between image 1 lying awake and image 2 head-down sleep. Image 1 is the starting pose/edit target, image 2 is the final pose reference. Same golden long-haired dog, photographic cutout rendering, same brown collar and black bone tag, same camera and head/body size, same 1254-square framing and generous transparent margins. Nearly the sleeping position of image 2, but head is still hovering a small distance above the front paws, neck lowered and chest resting, closed sleepy eyes, ears relaxed outward. Chin/nose just above the paws with a small visible gap, rather than already resting on them. Front paws, back, hind legs and curled tail nearly in image 2 positions. Face pitches slightly down toward paws. Natural single anatomical intermediate pose. No head held upright, no standing/sitting, no tongue/smile, no duplicates or ghosting, no text/background/floor/shadow. One full dog sprite with fine fur edges, real transparent background.\n",
+      "placement": {
+        "file": "frames/lay-sleep-late.png",
+        "sha256": "4f3f3b6179ff2f755861c349d4223944ffc97d9c9155abdde0a8b798da10916f",
+        "width": 1254,
+        "height": 1254,
+        "bounds": [
+          22,
+          486,
+          1232,
+          910
+        ],
+        "scale": 1.3390608051533968,
+        "supportX": 319,
+        "supportY": 905,
+        "draft": true,
+        "reviewStatus": "sleep-transition-candidate"
+      }
+    }
+  ]
+}

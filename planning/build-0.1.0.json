@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-11",
+  "version": "0.1.0",
+  "status": "portable development build ready for owner desktop testing",
+  "path": "test-exes/TheJudge-Dev-0.1.0.exe",
+  "sha256": "be30ad11f61d32f20593190e6c32f368e691d7f6856378afc5063d2ff42952e1",
+  "bytes": 32953856,
+  "headlessChecks": {
+    "passed": true,
+    "version": "0.1.0",
+    "embeddedFrames": 18,
+    "geometryPlacements": 540,
+    "simulatedHours": 96,
+    "restFraction": 0.984434027781012,
+    "stateChanges": 1419,
+    "actions": 14355,
+    "approvedBodiesAndBlinkAlphaUnchanged": true,
+    "sleepBlocksExpressions": true,
+    "draftsOffByDefault": true,
+    "pauseAndMenuDragSuppression": true,
+    "wakeToAwakeLying": true,
+    "cacheLimit": 6,
+    "taskbarOrderCases": 8,
+    "alphaHitTest": true,
+    "identityIsolated": true,
+    "uiOpened": false,
+    "registryWritten": false,
+    "networkUsed": false,
+    "manualReviewRequired": "Layered window, dragging, tray/menu, mixed-DPI monitors and new seated blink/transitions"
+  },
+  "standaloneBuild": {
+    "passed": true,
+    "inputs": [
+      "app/",
+      "art/",
+      "build.ps1"
+    ],
+    "pathContainsSpaces": true,
+    "parentDependencies": false,
+    "referenceArchiveRequired": false
+  },
+  "authoring": "Approved render snapshots explicitly exported by tools/Promote-RuntimeArt.ps1. Ordinary build only embeds tracked frames after digest verification.",
+  "manualTesting": [
+    "start companion and inspect floor/scale",
+    "drag on and between monitors",
+    "tray/context menu/size/pause/quit",
+    "mixed-DPI monitor handling",
+    "Testing > Review poses and new frames: seated blink and sit/lie transition candidates"
+  ],
+  "limits": [
+    "No autonomous travel, perches, directional gaze or updater.",
+    "No startup registration or installation.",
+    "Direct awake/sleep pose change; no new sleep lowering animation.",
+    "New seated blink and sit/lie transitions remain draft, disabled in automatic companion by default."
+  ],
+  "approvals": [
+    "draft-assets/approved-sit-v1/approval.json",
+    "draft-assets/approved-rest-v1/approval.json",
+    "draft-assets/approved-actions-v1/approval.json"
+  ]
+}

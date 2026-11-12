@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-11",
+  "ownerWords": "pass great job!",
+  "scope": "Corrected common-scale sit/lay/head-down sleep review and lying blink shown in art-review-v1.png, blink-review-v1.gif and Judge-ArtReview-v1.exe. Preserve the rendered eye-mask approach, uniform scales, supports and timing. Not approval of later action candidates.",
+  "files": {
+    "lay.png": "draft-assets/lay-v2/lay.png",
+    "sleep.png": "draft-assets/sleep-v2/sleep.png",
+    "blink-early.png": "draft-assets/lay-blink-v1/early.png",
+    "blink-late.png": "draft-assets/lay-blink-v1/late.png",
+    "blink-closed-source.png": "draft-assets/sleep-v1/sleep.png",
+    "registration.json": "planning/art-review-v1.json",
+    "ArtReview.cs": "tools/ArtReview.cs",
+    "Build-ArtReview.ps1": "tools/Build-ArtReview.ps1",
+    "review.png": "build/art-review-v1.png",
+    "blink.gif": "build/blink-review-v1.gif",
+    "checks.json": "build/art-review-v1.json",
+    "Judge-ArtReview-v1.exe": "test-exes/Judge-ArtReview-v1.exe"
+  },
+  "sha256": {
+    "lay.png": "4dd27bc4aef9dec2caf3f0eb5f877aef4e116de408e26a6de10f551a68b4bf9c",
+    "sleep.png": "c6bb479a1f9c8698247ed2c8cd19d9990cd4858a13d24b15e9a2b4d37508b3b9",
+    "blink-early.png": "0b9a87da242d2b402a98f6dd691df6bcde109af383220a98c82a3294fd5ddfb8",
+    "blink-late.png": "f20894825ecadf21b4921203be19a4901c82f11a62369e58f727e93d222c7817",
+    "blink-closed-source.png": "5a594d9d4ddc33aa9908a1611c399161178e78bbe582dabd803cbbc3e247347a",
+    "registration.json": "f27b6f0944d26d7f37bee63f81decd78db4e6a47f287c5b4e3b131061b8276ed",
+    "ArtReview.cs": "5af848d0afcd7a1146d050b66db5b38eb361d0e5163f048c01583a30d201e784",
+    "Build-ArtReview.ps1": "fdbb9f1b419adb9e26130c77af0d246f462d3dc6733b529a875281612eee50ca",
+    "review.png": "615ad6768bf6a644195c10e045b79ce4b5a4ac81812aa3d5a1144954bb237052",
+    "blink.gif": "d0d1103fc1e1dbbab8547d8707f80296ffb1af74b04d8d9b51441c9c0bb04a99",
+    "checks.json": "60ded002b1f5e8e258a7308fc45e3c64d4b46d6f8d83b7abd810bbe8d3fd6126",
+    "Judge-ArtReview-v1.exe": "fa33c286ff078eeffc8606122b6230a8cf54c97af1eeb6fe69aaae5fbd822043"
+  }
+}

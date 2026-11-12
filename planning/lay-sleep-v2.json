@@ -1,0 +1,13 @@
+{
+  "status": "ear repair candidate; owner visual review pending",
+  "ownerFeedback": "you're losing control and definitions in his ears again... getting fuzzy around the edges",
+  "ownerApproved": false,
+  "previousDrawings": "draft-assets/lay-sleep-v1/ retained unchanged; rejected for ear definition",
+  "generation": "draft-assets/lay-sleep-v2/generation.json",
+  "authoring": "tools/Build-SleepEarRepair.cs; explicit export, not build dependency",
+  "checks": "planning/sleep-ear-repair-checks.json",
+  "reviewGif": "build/lay-sleep-0.1.5.gif",
+  "closeup": "build/sleep-ear-nod-0.1.5.png",
+  "timingAndSupportUnchanged": true,
+  "approvedSnapshotsUnchanged": true
+}

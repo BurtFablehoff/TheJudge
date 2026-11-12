@@ -1,0 +1,90 @@
+{
+  "status": "candidate for owner review",
+  "method": "Uniform body-scale correction with horizontal rear-paw anchor, independent of lowering muzzle; keep original floor support rows.",
+  "referenceFrame": "lay",
+  "referenceRearPawX": 857.6,
+  "referenceWorldRearPawX": 607.5162384393788,
+  "bodyScaleEvidence": "Nod and early SIFT body-only similarity fits: 129/69 inliers. Later drawing size correction 0.95 relative to awake scale, to be visually reviewed.",
+  "entries": [
+    {
+      "frame": "lay-sleep-nod",
+      "oldPlacement": {
+        "scale": 1.3428493324241906,
+        "supportX": 385,
+        "supportY": 976
+      },
+      "newPlacement": {
+        "scale": 1.3392082666132694,
+        "supportX": 404.3616424831892,
+        "supportY": 976
+      },
+      "rearPawX": 858.0,
+      "relativeBodyScale": 0.996686,
+      "stationaryWorldPawX": 607.5162384393788
+    },
+    {
+      "frame": "lay-sleep-early",
+      "oldPlacement": {
+        "scale": 1.3417668960611067,
+        "supportX": 340,
+        "supportY": 949
+      },
+      "newPlacement": {
+        "scale": 1.276714586075785,
+        "supportX": 451.15657730778287,
+        "supportY": 949
+      },
+      "rearPawX": 927.0,
+      "relativeBodyScale": 0.950176,
+      "stationaryWorldPawX": 607.5162384393788
+    },
+    {
+      "frame": "lay-sleep-mid",
+      "oldPlacement": {
+        "scale": 1.3404138506072516,
+        "supportX": 326,
+        "supportY": 928
+      },
+      "newPlacement": {
+        "scale": 1.2764781017116784,
+        "supportX": 439.0684210526315,
+        "supportY": 928
+      },
+      "rearPawX": 915.0,
+      "relativeBodyScale": 0.95,
+      "stationaryWorldPawX": 607.5162384393788
+    },
+    {
+      "frame": "lay-sleep-late",
+      "oldPlacement": {
+        "scale": 1.3390608051533968,
+        "supportX": 319,
+        "supportY": 905
+      },
+      "newPlacement": {
+        "scale": 1.2764781017116784,
+        "supportX": 447.76842105263154,
+        "supportY": 905
+      },
+      "rearPawX": 923.7,
+      "relativeBodyScale": 0.95,
+      "stationaryWorldPawX": 607.5162384393788
+    },
+    {
+      "frame": "sleep",
+      "oldPlacement": {
+        "scale": 1.3382489778810838,
+        "supportX": 319.29,
+        "supportY": 903
+      },
+      "newPlacement": {
+        "scale": 1.2764781017116784,
+        "supportX": 448.26842105263154,
+        "supportY": 903
+      },
+      "rearPawX": 924.2,
+      "relativeBodyScale": 0.95,
+      "stationaryWorldPawX": 607.5162384393788
+    }
+  ]
+}
