@@ -12,8 +12,8 @@ using PetFramework;
 #else
 [assembly:AssemblyProduct("The Judge Companion")]
 #endif
-[assembly:AssemblyVersion("0.1.7.0")]
-[assembly:AssemblyFileVersion("0.1.7.0")]
+[assembly:AssemblyVersion("0.1.8.0")]
+[assembly:AssemblyFileVersion("0.1.8.0")]
 
 namespace Judge
 {
@@ -48,7 +48,9 @@ namespace Judge
                     if(args.Length==2&&args[0]=="--render-pose-cycle"){Checks.RenderPoseCycle(art,args[1]);return 0;}
                     if(args.Length==2&&args[0]=="--render-sleep-transitions"){Checks.RenderSleepTransitions(art,args[1]);return 0;}
                     if(args.Length==2&&args[0]=="--render-awake-actions"){Checks.RenderAwakeActions(art,args[1]);return 0;}
-                    if(args.Length!=0)throw new ArgumentException("Supported commands: --self-test <report.json>, --test-desktop <report.json>, --render-review <directory>, --render-transitions <directory>, --render-awake-actions <directory>, --render-sleep-transitions <directory>, --render-pose-cycle <directory>, --render-menu <image.png>, --test-product <report.json>.");
+                    if(args.Length==2&&args[0]=="--render-seated-watch"){WatchReview.Render(art,"sit",args[1]);return 0;}
+                    if(args.Length==2&&args[0]=="--render-lying-watch"){WatchReview.Render(art,"lay",args[1]);return 0;}
+                    if(args.Length!=0)throw new ArgumentException("Supported commands: --self-test <report.json>, --test-desktop <report.json>, --render-review <directory>, --render-transitions <directory>, --render-awake-actions <directory>, --render-sleep-transitions <directory>, --render-pose-cycle <directory>, --render-menu <image.png>, --render-seated-watch <directory>, --render-lying-watch <directory>, --test-product <report.json>.");
                     bool created;
                     using(Mutex mutex=new Mutex(true,Singleton,out created))
                     {

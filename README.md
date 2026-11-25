@@ -4,33 +4,33 @@
   <img src="art/frames/sit.png" alt="The Judge sitting" width="280">
 </p>
 
-Version 0.1.7 has separate production and developer menus. This is a portable
-Windows companion, built independently from this repository.
+The Judge is a Windows desktop companion with separate production and developer menus.
 
-Download [**TheJudge-Setup-0.1.7.exe**](https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge-Setup-0.1.7.exe) for the Windows installer. It installs for your user, adds a Start-menu shortcut and an uninstaller, and offers an optional desktop shortcut. No administrator rights are required.
+Download [**TheJudge-Setup-0.1.8.exe**](https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.8/TheJudge-Setup-0.1.8.exe) for the Windows installer. It installs for your user, adds a Start-menu shortcut and an uninstaller, and offers an optional desktop shortcut. No administrator rights are required.
 
-Prefer a portable copy? Download [**TheJudge.exe**](https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.7/TheJudge.exe), keep it in a writable folder, and run it.
+Prefer a portable copy? Download [**TheJudge.exe**](https://github.com/BurtFablehoff/TheJudge/releases/download/v0.1.8/TheJudge.exe), keep it in a writable folder, and run it.
 
 ## Run the production menu
 
-Quit older companions, then open `test-exes/TheJudge-0.1.7.exe`. Left- or right-click
-any visible part of him; clicking outside dismisses the menu. Left-drag moves him.
+Quit older companions, then open `TheJudge.exe`. Left- or right-click any visible
+part of him to open the menu. Clicking outside dismisses it. Left-drag moves him.
 The production menu follows Odin's sections:
 
 - Size: Small, Normal, Large.
-- Options: **Sit** and **Lay Down**, the only manual pose commands.
+- Options include **Sit**, **Lay Down**, **Watch Mouse**, and **Watch Window**.
 - Windows: **Start with Windows**, **Automatic updates**, **Check for updates**.
 - Screen: **Bring to this screen**, **Send to other screen**.
 - **Close**.
 
-He chooses sleep himself. Choosing Sit or Lay Down preserves his automatic routine
-and expressions; it does not pin an awake state forever. The approved transitions,
-repaired ear pixels, 2–8 second tilt/smile holds and slower nose lick are unchanged.
+The Judge can still sleep on his own after you choose Sit or Lay Down. Choose either
+Watch option while he is awake. Select the active option again to
+turn it off. Watch Window uses the foreground application's window. His body sits
+at the taskbar edge while his paws and tail can overlap it.
 
 Start with Windows is opt-in and uses only the per-user `TheJudge` Run value.
 Production settings/mutex are `TheJudgeCompanionV1`; development uses the separate
 `TheJudgeCompanionDevV1` identity. Development copies never register startup or
-apply production updates. Use `test-exes/TheJudge-Dev-0.1.7.exe` for the existing
+apply production updates. Use `test-exes/TheJudge-Dev-0.1.8.exe` for the existing
 State / Actions / Windows / Quit developer controls and animation review.
 
 The updater targets **BurtFablehoff/TheJudge**, with a release asset named
@@ -48,7 +48,7 @@ are intact; the approved 21-frame pose cycle is pixel- and timing-identical.
 
 Current hashes, checks and remaining live-desktop review:
 [build record](planning/current-build.json). Production menu preview:
-`build/production-menu-0.1.7.png`.
+`build/production-menu-0.1.8.png`.
 
 ## Build from this repository alone
 
@@ -206,9 +206,9 @@ Small immutable approval records are exported to art/approvals. The standalone
 build only requires app/, art/ and build.ps1; local artwork-authoring helpers may
 require the ignored draft sources. The intended release asset is TheJudge.exe.
 
-Release v0.1.7 is published. A clean source clone passes all checks, and the public
-update feed has been tested without authentication through an actual verified
-EXE download. Publication details: `planning/github-release-0.1.7.json`.
+Existing v0.1.7 installations can use **Check for updates** in the Windows
+section of the companion menu. The latest release includes a Windows installer
+for new installations and a portable executable.
 
 ## Build the installer
 
@@ -218,7 +218,7 @@ Use an existing Inno Setup compiler (ISCC.exe), then run:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Build-Installer.ps1 -CompilerPath "C:\path\to\ISCC.exe"
 ```
 
-The script builds the production app and packages `build/release/TheJudge-Setup-0.1.7.exe`.
+The script builds the production app and packages `build/release-0.1.8/TheJudge-Setup-0.1.8.exe`.
 It never runs the installer. The per-user install folder is `%LOCALAPPDATA%\Programs\TheJudge`.
 Start with Windows remains an option in the companion menu. Uninstall removes only
 this installation's matching startup entry and preserves unrelated applications.

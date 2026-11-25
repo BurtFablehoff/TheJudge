@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-24",
+  "ownerResponse": "pass lets test it with watch mouse and watch window",
+  "scope": "The 24 clock-gaze sprites in the reviewed Sit and Lie Down preview. Interactive tracking is a separate live test.",
+  "previewSha256": "c8d756032acffb540cc1b4c3e532f8423eec5f875d96ee87a490115731e5cea0",
+  "frames": {
+    "sit-look-12": "e6539b6f117375dd298731eaa41af7f0ce1b36aef43f705efd52486ccaf8deb1",
+    "sit-look-01": "91b88681b5e07c6df71f32543432b84aede4ca739311ca184e7f68aa7bbfbc11",
+    "sit-look-02": "3b558e0dad894d7a20444ba981956107b4d1b91d9725900dc34c86ccc448ca04",
+    "sit-look-03": "52232c19f6d28285573aa6da7f7cbbd3f7bf124b42321970d79d51611681ee2f",
+    "sit-look-04": "7dc222e5f2d8678d4a220c85983a270259e1ca4ca7042a5bfb6f94fd97a6df9d",
+    "sit-look-05": "e5c0445c9de725725cda8a71257607ed583de3725bd46f95a62e238a4d33b98d",
+    "sit-look-06": "25e5f519922f0580f0bf3c30596a171a7667a6948b8e3a702d59d2b0ca8c8968",
+    "sit-look-07": "d8d3e983a116df751d5d1e2324c493e72bbe6a87982afa36fd8a2055aa134d38",
+    "sit-look-08": "ef21ebd6f8362859c145938bf5dbd8cfe82ea692261ee52f2903729bba43d5e5",
+    "sit-look-09": "3cf1547434679ff03ebf9b4af5c3c01a8f0ad594254d2d2a36006988552a66c1",
+    "sit-look-10": "6ef26e8b6ed2d4a7a07a33d44441da810383cb298e04b446cfb75323c25a35bd",
+    "sit-look-11": "7e3bc2eb1b5381ef5505ce8696648f993ba8bbd105420eec64f9fd40b44264bc",
+    "lay-look-12": "2d0f8bfba1de2d256fd69ab8da8d60ce07e8f7032d5793c7beba707559c3afa8",
+    "lay-look-01": "6ddda9fcc8285a1a0caeea3dae04667e5088428fa43b20cfb32bafb0e28765c5",
+    "lay-look-02": "befdf491bea0bf5988d2431c3cc27f0d59f31c826b7055af36746b681eaf9b1b",
+    "lay-look-03": "88ad021bbf5c61ee4141a508f9dc7c98081f5e95b8c58753771522932c32d226",
+    "lay-look-04": "fe26ac1f88004d864425e0b46e51c532644780dc323cd928e5c55a8422c55c3e",
+    "lay-look-05": "7569e0c4d5ebcc46b5ded16e15c29eb9b3d3d7e2ff343484c7aaf59bc0d57985",
+    "lay-look-06": "0f00a2f8552f4615c0a5fc0911dcd4d8a911a42069e92bf348ab615e1b7e2699",
+    "lay-look-07": "e3ed8953467564a2a6bcd52940fe7bf07f698cf82820d7212513e019e21bd11b",
+    "lay-look-08": "b48489945a4508cf604cff806b0c1f3031603047df6b831bd8f72c728f708e95",
+    "lay-look-09": "c332abe3a8e88404d59def49af5c56d3c9640b0a5850a8e9ce823b8b6ba516cc",
+    "lay-look-10": "a0e846d6723cbc7d86ee56be6e40fa36fe112ca2fc6b0a79b831678778d2b161",
+    "lay-look-11": "19de58a8e5423103049e92ac899617bd330c3ce62283a0b026104ccf1ea15655"
+  }
+}

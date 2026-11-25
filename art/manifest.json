@@ -16,7 +16,12 @@
       "scale": 1.3436611596965036,
       "supportX": 405.465,
       "supportY": 976,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-blink-2": {
       "file": "frames/lay-blink-2.png",
@@ -32,7 +37,12 @@
       "scale": 1.3436611596965036,
       "supportX": 405.465,
       "supportY": 976,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-blink-3": {
       "file": "frames/lay-blink-3.png",
@@ -48,7 +58,12 @@
       "scale": 1.3436611596965036,
       "supportX": 405.465,
       "supportY": 976,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay": {
       "file": "frames/lay.png",
@@ -66,7 +81,12 @@
       "supportY": 976,
       "draft": false,
       "hasBodyAnchor": true,
-      "bodyAnchorX": 857.6
+      "bodyAnchorX": 857.6,
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lick-1": {
       "file": "frames/lick-1.png",
@@ -82,7 +102,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "lick-2": {
       "file": "frames/lick-2.png",
@@ -98,7 +123,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "lick-3": {
       "file": "frames/lick-3.png",
@@ -114,7 +144,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "sit-blink-closed": {
       "file": "frames/sit-blink-closed.png",
@@ -130,7 +165,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "sit-blink-half": {
       "file": "frames/sit-blink-half.png",
@@ -146,7 +186,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "sit-lay-early": {
       "file": "frames/sit-lay-early.png",
@@ -162,7 +207,12 @@
       "scale": 1.0295098239819713,
       "supportX": 433.80801507075194,
       "supportY": 1120,
-      "draft": true
+      "draft": true,
+      "bodyFloorY": 1010.0,
+      "bodyFloorBand": [
+        555,
+        610
+      ]
     },
     "sit-lay-late": {
       "file": "frames/sit-lay-late.png",
@@ -178,7 +228,12 @@
       "scale": 1.11859866410756,
       "supportX": 406.58905264321277,
       "supportY": 1062,
-      "draft": true
+      "draft": true,
+      "bodyFloorY": 957.0,
+      "bodyFloorBand": [
+        637,
+        689
+      ]
     },
     "sit-lay-mid": {
       "file": "frames/sit-lay-mid.png",
@@ -194,7 +249,12 @@
       "scale": 1.05437075924421,
       "supportX": 434.060733698812,
       "supportY": 1055,
-      "draft": true
+      "draft": true,
+      "bodyFloorY": 944.0,
+      "bodyFloorBand": [
+        599,
+        645
+      ]
     },
     "sit": {
       "file": "frames/sit.png",
@@ -210,7 +270,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "sleep": {
       "file": "frames/sleep.png",
@@ -228,7 +293,12 @@
       "supportY": 903,
       "draft": false,
       "hasBodyAnchor": true,
-      "bodyAnchorX": 924.2
+      "bodyAnchorX": 924.2,
+      "bodyFloorY": 865.0,
+      "bodyFloorBand": [
+        605,
+        640
+      ]
     },
     "smile-1": {
       "file": "frames/smile-1.png",
@@ -244,7 +314,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "smile-2": {
       "file": "frames/smile-2.png",
@@ -260,7 +335,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "tilt-1": {
       "file": "frames/tilt-1.png",
@@ -276,7 +356,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "tilt-2": {
       "file": "frames/tilt-2.png",
@@ -292,7 +377,12 @@
       "scale": 1.0,
       "supportX": 526.635,
       "supportY": 1232,
-      "draft": false
+      "draft": false,
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ]
     },
     "lay-lick-1": {
       "file": "frames/lay-lick-1.png",
@@ -309,7 +399,12 @@
       "supportX": 405.465,
       "supportY": 976,
       "draft": true,
-      "reviewStatus": "lying-expression-candidate"
+      "reviewStatus": "lying-expression-candidate",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-lick-2": {
       "file": "frames/lay-lick-2.png",
@@ -326,7 +421,12 @@
       "supportX": 405.465,
       "supportY": 976,
       "draft": true,
-      "reviewStatus": "lying-expression-candidate"
+      "reviewStatus": "lying-expression-candidate",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-lick-3": {
       "file": "frames/lay-lick-3.png",
@@ -343,7 +443,12 @@
       "supportX": 405.465,
       "supportY": 976,
       "draft": true,
-      "reviewStatus": "lying-expression-candidate"
+      "reviewStatus": "lying-expression-candidate",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-smile-1": {
       "file": "frames/lay-smile-1.png",
@@ -360,7 +465,12 @@
       "supportX": 405.465,
       "supportY": 976,
       "draft": true,
-      "reviewStatus": "lying-expression-candidate"
+      "reviewStatus": "lying-expression-candidate",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-smile-2": {
       "file": "frames/lay-smile-2.png",
@@ -377,7 +487,12 @@
       "supportX": 405.465,
       "supportY": 976,
       "draft": true,
-      "reviewStatus": "lying-expression-candidate"
+      "reviewStatus": "lying-expression-candidate",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-tilt-1": {
       "file": "frames/lay-tilt-1.png",
@@ -394,7 +509,12 @@
       "supportX": 405.465,
       "supportY": 976,
       "draft": true,
-      "reviewStatus": "lying-expression-candidate"
+      "reviewStatus": "lying-expression-candidate",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-tilt-2": {
       "file": "frames/lay-tilt-2.png",
@@ -411,7 +531,12 @@
       "supportX": 405.465,
       "supportY": 976,
       "draft": true,
-      "reviewStatus": "lying-expression-candidate"
+      "reviewStatus": "lying-expression-candidate",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-sleep-nod": {
       "file": "frames/lay-sleep-nod-v2.png",
@@ -430,7 +555,12 @@
       "draft": true,
       "reviewStatus": "ear-detail-repair-candidate",
       "hasBodyAnchor": true,
-      "bodyAnchorX": 858.0
+      "bodyAnchorX": 858.0,
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ]
     },
     "lay-sleep-early": {
       "file": "frames/lay-sleep-early-v2.png",
@@ -449,7 +579,12 @@
       "draft": true,
       "reviewStatus": "ear-detail-repair-candidate",
       "hasBodyAnchor": true,
-      "bodyAnchorX": 927.0
+      "bodyAnchorX": 927.0,
+      "bodyFloorY": 884.0,
+      "bodyFloorBand": [
+        605,
+        657
+      ]
     },
     "lay-sleep-mid": {
       "file": "frames/lay-sleep-mid-v2.png",
@@ -468,7 +603,12 @@
       "draft": true,
       "reviewStatus": "ear-detail-repair-candidate",
       "hasBodyAnchor": true,
-      "bodyAnchorX": 915.0
+      "bodyAnchorX": 915.0,
+      "bodyFloorY": 886.0,
+      "bodyFloorBand": [
+        600,
+        639
+      ]
     },
     "lay-sleep-late": {
       "file": "frames/lay-sleep-late-v2.png",
@@ -487,7 +627,12 @@
       "draft": true,
       "reviewStatus": "ear-detail-repair-candidate",
       "hasBodyAnchor": true,
-      "bodyAnchorX": 923.7
+      "bodyAnchorX": 923.7,
+      "bodyFloorY": 868.0,
+      "bodyFloorBand": [
+        600,
+        640
+      ]
     }
   },
   "clips": {

@@ -1,0 +1,488 @@
+{
+  "date": "2026-11-24",
+  "ownerResponse": "pass",
+  "scope": "v6 desktop body-floor placement for The Judge seated and lying awake, including the permitted paw and tail overhang. This records the accepted Watch Mouse build and the previously approved seated sprite set.",
+  "executable": {
+    "name": "TheJudge-Dev-Watch-v6.exe",
+    "sha256": "a0f74a21eca0fa23496421467a99f096dab6ee4eeb86c2f1577d7614d85f1ab5"
+  },
+  "artManifestSha256": "a54d52843fb239b820f3c18c64a4ee2c92926a343026eedba6a445aa6a40be74",
+  "gazeManifestSha256": "edfb77e0c99da338e63a9cb50f2f55e62413ae69730a3de01ab0b3cf1948984e",
+  "comparisonSha256": "3dd16fa2399bfef5d9ce8bd77e70ba89c0ce3ff2d9d1d0f5fd76fa1db95eb3bd",
+  "floorVerification": {
+    "renderedCases": 159,
+    "sizes": [
+      "Small",
+      "Normal",
+      "Large"
+    ],
+    "testReportSha256": "bad01a0478bf91d77bbc475812676b054a5de59436253646ab4a1e0c2cba5d62"
+  },
+  "bodyFloor": {
+    "lay-blink-1": {
+      "sha256": "af4569f2024aa7de5e4c8d0c24abbe54335f4f0a1d671278e7e10996502f4bd9",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-blink-2": {
+      "sha256": "beb484d70f09bf846cd18e9b91930a5433353f0f1351424bd36759509c62107e",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-blink-3": {
+      "sha256": "1a3121853e6f3e074a29911670dc40dec9b857107450b3efd864889b4588e863",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay": {
+      "sha256": "5f1e9df1668428413027aa78d1467b01b7dfa265a47ebcfbca8eea64c7c91288",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lick-1": {
+      "sha256": "c6b54edad1de28b6d3b11eebb53e8db44ef79e0a040c478e1e3389549ad6a899",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "lick-2": {
+      "sha256": "1f02f280a06f8c1df93eebb14cdedfb32c45336dc094e59c6f2069b98c7d230c",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "lick-3": {
+      "sha256": "11b193e4b5e3566c2c018c3d6d340f308ce951d47d66de7cc6c6bddd8de19b58",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "sit-blink-closed": {
+      "sha256": "e5ce9e933110396ff50757d3612b2736bbcce60baa93aae48ab5a8aa739e1596",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "sit-blink-half": {
+      "sha256": "9938c492fb7e64409d19bd381a76091886d9bb54f9ac5fbd1f6745a9a1cfea81",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "sit-lay-early": {
+      "sha256": "5edd3d6050d0f5fb43464a58e0093ce9fa7d4d744971328e2b8a7a36365bc707",
+      "bodyFloorY": 1010.0,
+      "bodyFloorBand": [
+        555,
+        610
+      ],
+      "scale": 1.0295098239819713,
+      "supportX": 433.80801507075194,
+      "supportY": 1120
+    },
+    "sit-lay-late": {
+      "sha256": "a2f9db52fd78469e7b332acd0073973e12fbec75c3eaf6fffc09a349c2609667",
+      "bodyFloorY": 957.0,
+      "bodyFloorBand": [
+        637,
+        689
+      ],
+      "scale": 1.11859866410756,
+      "supportX": 406.58905264321277,
+      "supportY": 1062
+    },
+    "sit-lay-mid": {
+      "sha256": "31b558aea91e3c7901e84d104406918eba355425d434fe32ad2a51f1af691059",
+      "bodyFloorY": 944.0,
+      "bodyFloorBand": [
+        599,
+        645
+      ],
+      "scale": 1.05437075924421,
+      "supportX": 434.060733698812,
+      "supportY": 1055
+    },
+    "sit": {
+      "sha256": "d8f519721121b8d4262c8e4ef720e985966d3f6c2409c017ea84454050e24e27",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "sleep": {
+      "sha256": "bca999947723c7022de331e23af1ab112e8cd2e650d8aa66b6e5dddb1f270d02",
+      "bodyFloorY": 865.0,
+      "bodyFloorBand": [
+        605,
+        640
+      ],
+      "scale": 1.2764781017116784,
+      "supportX": 448.26842105263154,
+      "supportY": 903
+    },
+    "smile-1": {
+      "sha256": "82ed5752567c3050bf24ca84060699e5fedd83a3bb82ce2fe46e7950994156c9",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "smile-2": {
+      "sha256": "8e8942fbf87830a902b80b0454c936f2228a2799f88cd2cdd8af8efbdaa13997",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "tilt-1": {
+      "sha256": "3508b2c40d368ea1615871273268b2cc885aeabafc96155aaaba9076a1fcf521",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "tilt-2": {
+      "sha256": "d7afd2b585b16bd5e1a1b0605ac312b088e52015d93893d18efd863b0252e460",
+      "bodyFloorY": 1151.0,
+      "bodyFloorBand": [
+        495,
+        540
+      ],
+      "scale": 1.0,
+      "supportX": 526.635,
+      "supportY": 1232
+    },
+    "lay-lick-1": {
+      "sha256": "697b1a8e4905aeb78cf5f970ec18f808115871bc8a09d56596d5aedf8896fe68",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-lick-2": {
+      "sha256": "ccfaa7a165d63d84fafe865814f6a2772ae18ff6244478bbae4f18306237925d",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-lick-3": {
+      "sha256": "467dad3ece62ba07c5d550e06690d61ed8760da56aae7d0038f0d78bb6cf061b",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-smile-1": {
+      "sha256": "0ab23fdda8a9aebadb1e55502703d3adc208010270da7774aa2a1f0dd1cada64",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-smile-2": {
+      "sha256": "3a37ea9ce24989532363841fed830006ed9202d1624d48f87ffc28d5fac68013",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-tilt-1": {
+      "sha256": "baf1f72229fced06e8eebc56293f1100c81c74e9871f2f056ddfbdb1a7264a5c",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-tilt-2": {
+      "sha256": "975888cc2665333457165961f713a3d6bcfc26cba43a4ca0a7f964d4fffc47c4",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3436611596965036,
+      "supportX": 405.465,
+      "supportY": 976
+    },
+    "lay-sleep-nod": {
+      "sha256": "c300487adbd6ce401640193357174685e206bb37304f7841aa60461b7dfbde29",
+      "bodyFloorY": 910.0,
+      "bodyFloorBand": [
+        600,
+        654
+      ],
+      "scale": 1.3392082666132694,
+      "supportX": 404.3616424831892,
+      "supportY": 976
+    },
+    "lay-sleep-early": {
+      "sha256": "54a6c7b491437732eb1645028be2269e61b40bdc323b086387ef9d97db58fcee",
+      "bodyFloorY": 884.0,
+      "bodyFloorBand": [
+        605,
+        657
+      ],
+      "scale": 1.276714586075785,
+      "supportX": 451.15657730778287,
+      "supportY": 949
+    },
+    "lay-sleep-mid": {
+      "sha256": "151bf83d686da19b14a232e030c188777976da8c3c94d2718465850d3ab9596f",
+      "bodyFloorY": 886.0,
+      "bodyFloorBand": [
+        600,
+        639
+      ],
+      "scale": 1.2764781017116784,
+      "supportX": 439.0684210526315,
+      "supportY": 928
+    },
+    "lay-sleep-late": {
+      "sha256": "2570553b77cb547f4ec21f6ac424bc01be275ed288c93540443d2c47f7a6f274",
+      "bodyFloorY": 868.0,
+      "bodyFloorBand": [
+        600,
+        640
+      ],
+      "scale": 1.2764781017116784,
+      "supportX": 447.76842105263154,
+      "supportY": 905
+    }
+  },
+  "gaze": {
+    "sit-look-12": {
+      "sha256": "96b1177e234cc162549795e5e97c870a3c1549d46094f13f8462b3e1d620144a",
+      "scale": 0.9999630715321514,
+      "supportX": 526.8856497137454,
+      "supportY": 1232.5462299744195
+    },
+    "sit-look-01": {
+      "sha256": "17b178cbd085ebaa3e0621a7a08f0a04c5ded9ef6edb057f12db4db493f12da8",
+      "scale": 0.9984571567269312,
+      "supportX": 526.5596716668048,
+      "supportY": 1233.0332560114127
+    },
+    "sit-look-02": {
+      "sha256": "bf263ce973762aef2b960e60947ae9ef7a3ea637a7bcedabdc005d8d59497688",
+      "scale": 0.9990511493474422,
+      "supportX": 526.6746012634001,
+      "supportY": 1232.600392100205
+    },
+    "sit-look-03": {
+      "sha256": "818a823c095856c636c2fd01f424a88cae45883f73aa384d28b0e49f97a56e19",
+      "scale": 1.0018521732075447,
+      "supportX": 527.1750559431881,
+      "supportY": 1232.4381781514571
+    },
+    "sit-look-04": {
+      "sha256": "713af8bec0360ce38afee2a4473109236b9ebbe522f7ea6c47180cd7a63f587a",
+      "scale": 1.0001497866741345,
+      "supportX": 526.5987924829244,
+      "supportY": 1232.250610083444
+    },
+    "sit-look-05": {
+      "sha256": "80ba7b1eb5cc719ae2d9d6b4f60ee75ce71e1c640fe740d176c0128145883022",
+      "scale": 1.0007915860562029,
+      "supportX": 527.3048175563325,
+      "supportY": 1232.97900520231
+    },
+    "sit-look-06": {
+      "sha256": "d2babf6fa80b05600a5aeee7f12569704232f1a3432049556d62e382e80cee52",
+      "scale": 0.9995037665433257,
+      "supportX": 526.7999365538589,
+      "supportY": 1232.1854851678245
+    },
+    "sit-look-07": {
+      "sha256": "2a61ae3e0e2e1da6cc4411601f32dda58496e42bd43741f1979fe1c2bfc02dde",
+      "scale": 0.9985443887524447,
+      "supportX": 526.7454972474254,
+      "supportY": 1232.9950239085497
+    },
+    "sit-look-08": {
+      "sha256": "a1be43541db9b89ae72220eca599b81f261b3d83fa79d83ee352239928877719",
+      "scale": 0.9999246492429718,
+      "supportX": 526.5481594573415,
+      "supportY": 1232.193791276595
+    },
+    "sit-look-09": {
+      "sha256": "ca1484fec5ae14200cf8bfe6c2516bcfc9c052c9dcc6ec6105d4d6e7e6f31f0a",
+      "scale": 1.0002769396193996,
+      "supportX": 526.6079686969798,
+      "supportY": 1232.9926586314607
+    },
+    "sit-look-10": {
+      "sha256": "6fca73024fd4aa0ca5a553902b5f7af39ba72c3a9f0aebf8538dab7d8ea3c781",
+      "scale": 1.000038461653587,
+      "supportX": 526.7095789001072,
+      "supportY": 1232.9998271070651
+    },
+    "sit-look-11": {
+      "sha256": "5af593d7268b0f8f068ced96fa49f8296c9be37412265080d34a12eac98afab0",
+      "scale": 0.999792223517195,
+      "supportX": 526.6121208893917,
+      "supportY": 1233.1080032429422
+    },
+    "lay-look-12": {
+      "sha256": "9b7f0fc9a25efaa17ef48584e1d762800d9019cc834c349cfc663cb9874120cc",
+      "scale": 1.3420358070604574,
+      "supportX": 405.4371722294729,
+      "supportY": 978.0163125790807
+    },
+    "lay-look-01": {
+      "sha256": "10d2afc746407d391938d0e0eab366eaa9e788860f4091f7b6a35b80297ed4f6",
+      "scale": 1.3444369679139012,
+      "supportX": 405.85573624386586,
+      "supportY": 974.9867266285275
+    },
+    "lay-look-02": {
+      "sha256": "88df32a114973eb1fee5b80d47e102212bbd69ddae26add6d1a9224585334f4f",
+      "scale": 1.344992932468951,
+      "supportX": 405.9307078831598,
+      "supportY": 976.2475214895572
+    },
+    "lay-look-03": {
+      "sha256": "17082adb34903265e2f3b7f18eda22023faa321b2322318dc1a3723f8ce8f7f2",
+      "scale": 1.3437781178995993,
+      "supportX": 405.9349281129094,
+      "supportY": 976.9981597423159
+    },
+    "lay-look-04": {
+      "sha256": "c7f0e4b271684f36d2e0621bb038ceeae5a1d7f58648e33ee61757de83f6c525",
+      "scale": 1.3434554983207083,
+      "supportX": 405.837006677485,
+      "supportY": 978.0036860831641
+    },
+    "lay-look-05": {
+      "sha256": "5cf17cedcc68ebd9fec9fc14fab630d3d2f74bcea32d250e298d3d580ebc75d1",
+      "scale": 1.343377439922345,
+      "supportX": 405.72302754166947,
+      "supportY": 977.505020740636
+    },
+    "lay-look-06": {
+      "sha256": "dac7704dd21dd89ebe88cf6548fe312942e336ae501625aa1f92dd09a51020f5",
+      "scale": 1.3419754186080644,
+      "supportX": 405.3343158511725,
+      "supportY": 976.6157254484357
+    },
+    "lay-look-07": {
+      "sha256": "11ed46e50de38e7fc0b11ba56b33599bc098955aad113707a38bf22e634f0d38",
+      "scale": 1.3426487771469222,
+      "supportX": 405.36264721725735,
+      "supportY": 977.0350638419009
+    },
+    "lay-look-08": {
+      "sha256": "18c1143d4c7e3386b437db860fd529d86f27898333a1805f4964df65fdde11a7",
+      "scale": 1.3418202455908177,
+      "supportX": 405.20737505238975,
+      "supportY": 977.0493847527018
+    },
+    "lay-look-09": {
+      "sha256": "e2e044839b999136ff0cc68cf72ee400ce4656375ef5013ba3c58ff060736762",
+      "scale": 1.3428155346255315,
+      "supportX": 405.46069410008374,
+      "supportY": 976.6024805464111
+    },
+    "lay-look-10": {
+      "sha256": "3e8c3644963f58cc08ac2496c7ec8cb302eea3fefb0fe841fc03cfeb92d30ec4",
+      "scale": 1.342997403669441,
+      "supportX": 405.3168841631024,
+      "supportY": 978.0177833266022
+    },
+    "lay-look-11": {
+      "sha256": "3c263472fd60e80a3867285e3f487bb8a53b6069cec26551ae2b63e37c9ef022",
+      "scale": 1.3430629674679582,
+      "supportX": 405.24544520627705,
+      "supportY": 976.5612304528556
+    }
+  }
+}

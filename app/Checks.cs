@@ -67,7 +67,7 @@ namespace Judge
                 RectangleF sprite=placement.Sprite(pair.Key,support,scale);FrameInfo f=pair.Value;double s=f.scale*scale;
                 Require(sprite.Left+f.Bounds.Left*s>=area.Left+3.8&&sprite.Left+f.Bounds.Right*s<=area.Right-3.8,"Visible side clipped: "+pair.Key);
                 Require(sprite.Top+f.Bounds.Top*s>=area.Top+3.8,"Visible top clipped: "+pair.Key);
-                Require(Math.Abs(sprite.Top+f.supportY*s-area.Bottom)<.01,"Support moved: "+pair.Key);
+                Require(Math.Abs(sprite.Top+placement.FloorY(pair.Key)*s-area.Bottom)<.01,"Body floor anchor moved: "+pair.Key);
                 if(f.hasBodyAnchor){FrameInfo reference=art.Manifest.frames["lay"];double actual=sprite.Left+f.bodyAnchorX*s;double expected=support.X+(reference.bodyAnchorX-reference.supportX)*reference.scale*scale;Require(Math.Abs(actual-expected)<.01,"Rear body anchor slid: "+pair.Key);bodyRegistrationCases++;}
                 placements++;
             }
@@ -109,10 +109,162 @@ namespace Judge
             Require(minimumHold<3&&maximumHold>7,"Hold range is not varying across invocations.");
             int sleepPaths=CheckSleepPaths(art);
             Routine normal=new Routine(art,5){Automatic=false};normal.SetPose("lay",true);Require(normal.Action=="sit-to-lay","Normal sitting-to-lying transition missing.");for(int i=0;i<20&&normal.InTransition;i++)normal.Step(.1,false);normal.SetPose("sit",true);Require(normal.Action=="lay-to-sit","Normal lying-to-sitting transition missing.");
-            var report=new{passed=true,allAwakeActionCases=awakeActions,sleepTransitionPaths=sleepPaths,observedMinimumPeakHold=minimumHold,observedMaximumPeakHold=maximumHold,holdsSampledOnce=true,noseLickSeconds=.60,version="0.1.7",embeddedFrames=checkedFrames,geometryPlacements=placements,stationaryRearBodyPlacements=bodyRegistrationCases,simulatedHours=96,restFraction=rest/total,stateChanges=transitions,actions=actions,approvedSitBlinkEnabledByDefault=true,automaticSitBlinksInTwoMinutes=sitting.Counts["sit-blink"],
+            int gazeCases = CheckGaze(art);
+            int bodyFloorCases = CheckBodyFloorRendering(art);
+            int seatedGazeBodyRenders = CheckWatchBodyRendering(art,"sit",660,new[]{new[]{260,350},new[]{556,642},new[]{708,801},new[]{462,530}});
+            int lyingGazeBodyRenders = CheckWatchBodyRendering(art,"lay",760,new[]{new[]{125,171},new[]{270,350},
+                new[]{555,607},new[]{679,735},new[]{800,866},new[]{970,1090,2}});
+            var report=new{passed=true,allAwakeActionCases=awakeActions,sleepTransitionPaths=sleepPaths,observedMinimumPeakHold=minimumHold,observedMaximumPeakHold=maximumHold,holdsSampledOnce=true,noseLickSeconds=.60,version=Program.Updater.CurrentVersion,embeddedFrames=checkedFrames,geometryPlacements=placements,stationaryRearBodyPlacements=bodyRegistrationCases,gazeCases=gazeCases,bodyFloorCases=bodyFloorCases,seatedGazeBodyRenders=seatedGazeBodyRenders,lyingGazeBodyRenders=lyingGazeBodyRenders,simulatedHours=96,restFraction=rest/total,stateChanges=transitions,actions=actions,approvedSitBlinkEnabledByDefault=true,automaticSitBlinksInTwoMinutes=sitting.Counts["sit-blink"],
                 approvedBodiesAndBlinkAlphaUnchanged=true,sleepBlocksExpressions=true,sitLieTransitionsEnabledByDefault=true,sleepTransitionPreviewEnabledByDefault=true,pauseAndMenuDragSuppression=true,wakeToAwakeLying=true,cacheLimit=Assets.CacheLimit,
                 taskbarOrderCases=8,alphaHitTest=true,identityIsolated=true,uiOpened=false,registryWritten=false,networkUsed=false,manualReviewRequired="Layered window, dragging, tray/menu, mixed-DPI monitors and candidate sit/lie/sleep transitions"};
             File.WriteAllText(path,new JavaScriptSerializer().Serialize(report));
+        }
+        static int CheckBodyFloorRendering(Assets art)
+        {
+            var placement=new Placement(art);
+            var floor=new PointF(-540.65f,900);
+            int cases=0;
+            foreach(string key in art.Manifest.frames.Keys)
+            {
+                string basis=Placement.GazePose(key);
+                FrameInfo frame=art.Manifest.frames[basis];
+                Require(frame.bodyFloorY.HasValue&&frame.bodyFloorBand!=null&&frame.bodyFloorBand.Length==2,
+                    "Missing measured body floor for "+key);
+                foreach(double scale in new[]{.24,.30,.36})
+                {
+                    RectangleF sprite=placement.Sprite(basis,floor,scale);
+                    double nativeScale=frame.scale*scale;
+                    int left=(int)Math.Ceiling(sprite.Left+frame.bodyFloorBand[0]*nativeScale);
+                    int right=(int)Math.Floor(sprite.Left+frame.bodyFloorBand[1]*nativeScale);
+                    Point origin;
+                    using(Bitmap rendered=placement.Paint(key,floor,scale,out origin))
+                    {
+                        byte[] pixels=Pixels(rendered);
+                        int row=RenderedUnderside(pixels,rendered.Width,rendered.Height,left-origin.X,right-origin.X,165,.50);
+                        Require(Math.Abs(row+origin.Y-floor.Y)<=2,"Body is above or below the floor: "+key+" at "+scale);
+                        int overhangRow=(int)floor.Y+7-origin.Y;
+                        Require(overhangRow>=0&&overhangRow<rendered.Height,"Overhang is outside the renderer: "+key);
+                        int covered=0;
+                        for(int x=0;x<rendered.Width;x++)
+                            if(pixels[(overhangRow*rendered.Width+x)*4+3]>165)covered++;
+                        Require(covered>=4,"Visible overhang was clipped: "+key);
+                    }
+                    cases++;
+                }
+            }
+            return cases;
+        }
+        static byte[] RenderWatchBody(Placement placement, string key, PointF support, double scale, Rectangle viewport)
+        {
+            Point location;
+            using (Bitmap rendered = placement.Paint(key,support,scale,out location))
+            using (Bitmap body = new Bitmap(viewport.Width,viewport.Height,PixelFormat.Format32bppArgb))
+            {
+                using (Graphics graphics = Graphics.FromImage(body))
+                    graphics.DrawImageUnscaled(rendered,location.X-viewport.X,location.Y-viewport.Y);
+                return Pixels(body);
+            }
+        }
+        static int RenderedUnderside(byte[] pixels, int width, int height, int left, int right, int alpha=64, double quantile=.80)
+        {
+            var bottoms = new List<int>();
+            for(int x=left;x<right;x++)
+                for(int y=height-1;y>=0;y--)
+                    if(pixels[(y*width+x)*4+3]>alpha)
+                    {
+                        bottoms.Add(y);
+                        break;
+                    }
+            Require(bottoms.Count>=right-left-2,"Watch contact area is missing.");
+            bottoms.Sort();
+            return bottoms[(int)(quantile*(bottoms.Count-1))];
+        }
+        static int CheckWatchBodyRendering(Assets art, string pose, int bodyStart, int[][] regions)
+        {
+            var placement = new Placement(art);
+            var support = new PointF(-540.65f,900);
+            int count = 0;
+            foreach (double scale in new[] {.24,.30,.36})
+            {
+                RectangleF sprite = placement.Sprite(pose,support,scale);
+                double nativeScale = art.Manifest.frames[pose].scale*scale;
+                var viewport = new Rectangle((int)Math.Floor(sprite.Left)-4,
+                    (int)Math.Ceiling(sprite.Top+bodyStart*nativeScale),
+                    (int)Math.Ceiling(sprite.Width)+8,
+                    (int)Math.Ceiling(sprite.Height-bodyStart*nativeScale)+8);
+                byte[] neutral = RenderWatchBody(placement,pose,support,scale,viewport);
+                for (int sector = 0; sector < 12; sector++)
+                {
+                    string key = WatchGaze.Key(pose,sector);
+                    byte[] watch = RenderWatchBody(placement,key,support,scale,viewport);
+                    int overlap=0,union=0;
+                    for(int i=3;i<neutral.Length;i+=4)
+                    {
+                        bool baseline=neutral[i]>96, candidate=watch[i]>96;
+                        if(baseline||candidate)union++;
+                        if(baseline&&candidate)overlap++;
+                    }
+                    Require(overlap>=union*.96,"Body silhouette changed in the desktop renderer: "+key+" at "+scale);
+                    foreach(var region in regions)
+                    {
+                        int left=(int)Math.Ceiling(sprite.Left+region[0]*nativeScale)-viewport.X;
+                        int right=(int)Math.Floor(sprite.Left+region[1]*nativeScale)-viewport.X;
+                        int a=RenderedUnderside(neutral,viewport.Width,viewport.Height,left,right);
+                        int b=RenderedUnderside(watch,viewport.Width,viewport.Height,left,right);
+                        int tolerance=region.Length==3?region[2]:1;
+                        Require(Math.Abs(a-b)<=tolerance,"Body contact changed in the desktop renderer: "+key+" at "+scale+" near native x="+region[0]);
+                    }
+                    count++;
+                }
+            }
+            return count;
+        }
+        static int CheckGaze(Assets art)
+        {
+            var gaze = new WatchGaze();
+            PointF head = new PointF(-730, 480);
+            foreach (string pose in new[] {"sit", "lay"})
+                foreach (WatchMode mode in new[] {WatchMode.Mouse, WatchMode.Window})
+                    for (int sector = 0; sector < 12; sector++)
+                    {
+                        gaze.Toggle(mode);
+                        double angle = sector * Math.PI / 6;
+                        PointF target = new PointF(head.X + (float)(300 * Math.Sin(angle)), head.Y - (float)(300 * Math.Cos(angle)));
+                        gaze.Step(0, pose, pose, head, target, 12);
+                        string key = gaze.Frame(pose, pose);
+                        Require(key == WatchGaze.Key(pose, sector) && art.Manifest.frames.ContainsKey(key), "Gaze sector failed.");
+                        gaze.Toggle(mode);
+                    }
+
+            gaze.Toggle(WatchMode.Mouse);
+            gaze.Step(0, "sit", "sit", head, new PointF(head.X - 150, head.Y - 260), 12);
+            gaze.Step(.10, "sit", "sit", head, new PointF(head.X, head.Y - 300), 12);
+            Require(gaze.Frame("sit", "sit") == "sit-look-12", "Clock wrap failed.");
+            gaze.Step(.20, "sit", "sit", head, new PointF(head.X + 86, head.Y - 290), 12);
+            Require(gaze.Frame("sit", "sit") == "sit-look-12", "Clock boundary jittered.");
+            gaze.Step(.30, "sit", "sit", head, new PointF(head.X - 300, head.Y), 12);
+            Require(gaze.Frame("sit", "sit") == "sit-look-11", "Clock did not start shortest turn.");
+            gaze.Step(.31, "sit", "sit", head, new PointF(head.X - 300, head.Y), 12);
+            Require(gaze.Frame("sit", "sit") == "sit-look-11", "Clock step interval was skipped.");
+            gaze.Step(.40, "sit", "sit", head, head, 12);
+            Require(gaze.Frame("sit", "sit") == "sit", "Pointer dead zone failed.");
+            gaze.Step(.50, "lay", "lay", head, new PointF(head.X, head.Y + 300), 12);
+            Require(gaze.Frame("lay", "lay") == "lay-look-06", "Awake pose switch missed target.");
+            gaze.Step(.60, "lay", "lay-blink-1", head, head, 12);
+            Require(gaze.Frame("lay", "lay-blink-1") == "lay-blink-1" && gaze.Frame("lay", "lay") == "lay", "Gaze overrode expression.");
+            gaze.Step(.70, "sleep", "sleep", head, new PointF(head.X, head.Y - 300), 12);
+            Require(gaze.Frame("sleep", "sleep") == "sleep", "Gaze overrode sleep.");
+            gaze.Toggle(WatchMode.Window);
+            PointF? window = WatchedWindow.Target(new Rectangle(-900, -100, 500, 600), "TestWindow");
+            Require(window == new PointF(-650, -20) && !WatchedWindow.Target(new Rectangle(-900, -100, 500, 600), "Shell_TrayWnd").HasValue
+                && !WatchedWindow.Read(IntPtr.Zero, 0).HasValue, "Foreground target failed.");
+            gaze.Step(.80, "lay", "lay", head, window, 12);
+            Require(gaze.Frame("lay", "lay") != "lay", "Window target did not select a key.");
+            gaze.Step(.90, "lay", "lay", head, null, 12);
+            Require(gaze.Frame("lay", "lay") == "lay", "Missing foreground window did not return to neutral.");
+            var sprite = new RectangleF(-1000, 200, 627, 627);
+            Require(WatchGaze.HeadOnScreen("sit", sprite, new Size(1254, 1254)) == new PointF(-741, 357.5f), "Head anchor did not follow sprite scale and position.");
+            return 60;
         }
         static int CheckSleepPaths(Assets art)
         {

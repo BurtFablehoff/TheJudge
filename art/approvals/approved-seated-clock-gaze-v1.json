@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-24",
+  "ownerResponse": "sit is a pass... now go to lay",
+  "scope": "All twelve seated whole-pose gaze sprites, their display transforms and the v4 live test.",
+  "neutralSha256": "d8f519721121b8d4262c8e4ef720e985966d3f6c2409c017ea84454050e24e27",
+  "executable": {
+    "name": "TheJudge-Dev-Watch-v4.exe",
+    "sha256": "09a70054a7cb309690e17a4b3809d95a4cdcea8b69f7dfb5f851733ca0beeefc"
+  },
+  "reviewGifSha256": "c68b48c3c37896f753a69be5f1db65c845bf16a6bf6c88617f24612a3f183077",
+  "frames": {
+    "sit-look-12": {
+      "file": "gaze/sit-look-12.png",
+      "sha256": "96b1177e234cc162549795e5e97c870a3c1549d46094f13f8462b3e1d620144a",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        194,
+        22,
+        1132,
+        1237
+      ],
+      "scale": 0.9999630715321514,
+      "supportX": 526.8856497137454,
+      "supportY": 1232.5462299744195,
+      "draft": false
+    },
+    "sit-look-01": {
+      "file": "gaze/sit-look-01.png",
+      "sha256": "17b178cbd085ebaa3e0621a7a08f0a04c5ded9ef6edb057f12db4db493f12da8",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        194,
+        25,
+        1132,
+        1237
+      ],
+      "scale": 0.9984571567269312,
+      "supportX": 526.5596716668048,
+      "supportY": 1233.0332560114127,
+      "draft": false
+    },
+    "sit-look-02": {
+      "file": "gaze/sit-look-02.png",
+      "sha256": "bf263ce973762aef2b960e60947ae9ef7a3ea637a7bcedabdc005d8d59497688",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        212,
+        33,
+        1136,
+        1237
+      ],
+      "scale": 0.9990511493474422,
+      "supportX": 526.6746012634001,
+      "supportY": 1232.600392100205,
+      "draft": false
+    },
+    "sit-look-03": {
+      "file": "gaze/sit-look-03.png",
+      "sha256": "818a823c095856c636c2fd01f424a88cae45883f73aa384d28b0e49f97a56e19",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        220,
+        22,
+        1132,
+        1236
+      ],
+      "scale": 1.0018521732075447,
+      "supportX": 527.1750559431881,
+      "supportY": 1232.4381781514571,
+      "draft": false
+    },
+    "sit-look-04": {
+      "file": "gaze/sit-look-04.png",
+      "sha256": "713af8bec0360ce38afee2a4473109236b9ebbe522f7ea6c47180cd7a63f587a",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        224,
+        26,
+        1133,
+        1236
+      ],
+      "scale": 1.0001497866741345,
+      "supportX": 526.5987924829244,
+      "supportY": 1232.250610083444,
+      "draft": false
+    },
+    "sit-look-05": {
+      "file": "gaze/sit-look-05.png",
+      "sha256": "80ba7b1eb5cc719ae2d9d6b4f60ee75ce71e1c640fe740d176c0128145883022",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        210,
+        17,
+        1135,
+        1237
+      ],
+      "scale": 1.0007915860562029,
+      "supportX": 527.3048175563325,
+      "supportY": 1232.97900520231,
+      "draft": false
+    },
+    "sit-look-06": {
+      "file": "gaze/sit-look-06.png",
+      "sha256": "d2babf6fa80b05600a5aeee7f12569704232f1a3432049556d62e382e80cee52",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        190,
+        22,
+        1138,
+        1236
+      ],
+      "scale": 0.9995037665433257,
+      "supportX": 526.7999365538589,
+      "supportY": 1232.1854851678245,
+      "draft": false
+    },
+    "sit-look-07": {
+      "file": "gaze/sit-look-07.png",
+      "sha256": "2a61ae3e0e2e1da6cc4411601f32dda58496e42bd43741f1979fe1c2bfc02dde",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        183,
+        30,
+        1133,
+        1237
+      ],
+      "scale": 0.9985443887524447,
+      "supportX": 526.7454972474254,
+      "supportY": 1232.9950239085497,
+      "draft": false
+    },
+    "sit-look-08": {
+      "file": "gaze/sit-look-08.png",
+      "sha256": "a1be43541db9b89ae72220eca599b81f261b3d83fa79d83ee352239928877719",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        199,
+        36,
+        1136,
+        1235
+      ],
+      "scale": 0.9999246492429718,
+      "supportX": 526.5481594573415,
+      "supportY": 1232.193791276595,
+      "draft": false
+    },
+    "sit-look-09": {
+      "file": "gaze/sit-look-09.png",
+      "sha256": "ca1484fec5ae14200cf8bfe6c2516bcfc9c052c9dcc6ec6105d4d6e7e6f31f0a",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        207,
+        25,
+        1135,
+        1237
+      ],
+      "scale": 1.0002769396193996,
+      "supportX": 526.6079686969798,
+      "supportY": 1232.9926586314607,
+      "draft": false
+    },
+    "sit-look-10": {
+      "file": "gaze/sit-look-10.png",
+      "sha256": "6fca73024fd4aa0ca5a553902b5f7af39ba72c3a9f0aebf8538dab7d8ea3c781",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        203,
+        19,
+        1133,
+        1237
+      ],
+      "scale": 1.000038461653587,
+      "supportX": 526.7095789001072,
+      "supportY": 1232.9998271070651,
+      "draft": false
+    },
+    "sit-look-11": {
+      "file": "gaze/sit-look-11.png",
+      "sha256": "5af593d7268b0f8f068ced96fa49f8296c9be37412265080d34a12eac98afab0",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        237,
+        21,
+        1136,
+        1237
+      ],
+      "scale": 0.999792223517195,
+      "supportX": 526.6121208893917,
+      "supportY": 1233.1080032429422,
+      "draft": false
+    }
+  }
+}

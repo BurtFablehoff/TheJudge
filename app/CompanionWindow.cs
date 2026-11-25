@@ -35,10 +35,14 @@ namespace Judge
     }
     internal sealed class CompanionWindow:LayeredSpriteWindow
     {
-        internal static string Title{get{return Program.Development?"The Judge - Development 0.1.7":"The Judge";}}
+        internal static string Title{get{return Program.Development?"The Judge - Development "+Program.Updater.CurrentVersion:"The Judge";}}
         readonly Assets art;readonly Placement placement;readonly Routine routine;readonly Preferences preferences;
         readonly Timer timer=new Timer();readonly Stopwatch clock=Stopwatch.StartNew();
         readonly UpdateCoordinator updates;
+        readonly WatchGaze watch = new WatchGaze();
+        ToolStripMenuItem watchMouseItem,watchWindowItem;
+        PointF? watchedTarget;
+        double watchAt;
         readonly ContextMenuStrip menu=new ContextMenuStrip();readonly NotifyIcon tray=new NotifyIcon();
         Icon trayIcon;Rectangle area;double x,lastTick,orderAt,hoverSince=-1;bool inMenu,dismissedPress;double dragX,suppressMenuUntil;int menuButtons;readonly PointerGesture gesture=new PointerGesture();ToolStripMenuItem actionMenu;
         string drawn="";Point drawnPoint;double drawnScale=-1;readonly uint process=(uint)Process.GetCurrentProcess().Id;
@@ -62,7 +66,7 @@ namespace Judge
                 using(Graphics g=Graphics.FromImage(icon)){g.DrawImage(art.Get("sit"),new Rectangle(0,0,32,32),new Rectangle(180,0,760,760),GraphicsUnit.Pixel);}
                 IntPtr handle=icon.GetHicon();try{using(Icon original=Icon.FromHandle(handle))trayIcon=(Icon)original.Clone();}finally{DestroyIcon(handle);}
             }
-            tray.Icon=trayIcon;tray.Text="The Judge 0.1.7"+(Program.Development?" (development)":"");tray.ContextMenuStrip=menu;tray.Visible=!headless;
+            tray.Icon=trayIcon;tray.Text="The Judge "+Program.Updater.CurrentVersion+(Program.Development?" (development)":"");tray.ContextMenuStrip=menu;tray.Visible=!headless;
             tray.DoubleClick+=delegate{BringHere();Show();drawn="";PaintFrame();};
             MouseDown+=PointerDown;MouseMove+=PointerMove;MouseUp+=PointerUp;MouseCaptureChanged+=delegate{if(!Capture)gesture.Cancel();};
             MouseEnter+=delegate{hoverSince=routine.Clock;};MouseLeave+=delegate{hoverSince=-1;};
@@ -86,6 +90,7 @@ namespace Judge
             string[] actions={"blink","tilt","smile","lick"},labels={"Blink","Head tilt","Cheesy smile","Nose lick"};
             for(int i=0;i<actions.Length;i++)
             {string action=actions[i];ToolStripMenuItem item=Add(actionMenu.DropDownItems,labels[i],delegate{routine.TryAction(action,true);});item.Tag=action;}
+            AddWatchModes(actionMenu.DropDownItems);
             menu.Items.Add(new ToolStripSeparator());ToolStripMenuItem windows=new ToolStripMenuItem("Windows");menu.Items.Add(windows);
             ToolStripMenuItem sizes=new ToolStripMenuItem("Size");windows.DropDownItems.Add(sizes);
             string[] names={"Small","Normal","Large"};double[] values={.24,.30,.36};
@@ -115,6 +120,7 @@ namespace Judge
             ToolStripMenuItem sit=Add(menu.Items,"Sit",delegate{routine.SelectAwake("sit");}),lay=Add(menu.Items,"Lay Down",delegate{routine.SelectAwake("lay");});
             sit.Checked=routine.Pose=="sit";lay.Checked=routine.Pose=="lay";
             menu.Opening+=delegate{sit.Checked=routine.Pose=="sit";lay.Checked=routine.Pose=="lay";};
+            AddWatchModes(menu.Items);
             menu.Items.Add(new ToolStripSeparator());Section("Windows");
             ToolStripMenuItem startup=Add(menu.Items,"Start with Windows",delegate{ChangeStartup();});menu.Opening+=delegate{startup.Checked=preferences.StartWithWindows;};
             startup.Checked=preferences.StartWithWindows;
@@ -123,7 +129,7 @@ namespace Judge
             Add(menu.Items,"Check for updates",delegate{requestedUpdateChecks++;if(updates!=null){updates.Check(true);tray.ShowBalloonTip(2000,"The Judge updates","Checking for a newer version...",ToolTipIcon.Info);}});
             menu.Items.Add(new ToolStripSeparator());Section("Screen");
             Add(menu.Items,"Bring to this screen",BringHere);Add(menu.Items,"Send to other screen",SendToOtherScreen);
-            menu.Items.Add(new ToolStripSeparator());Add(menu.Items,"Close",Close);
+            menu.Items.Add(new ToolStripSeparator());Add(menu.Items,"Close",Close);UpdateActions();
         }
         void ChangeStartup()
         {
@@ -150,12 +156,20 @@ namespace Judge
         }
         int CheckProductionMenu()
         {
-            string[] expected={"Size","-","Options","Sit","Lay Down","-","Windows","Start with Windows","Automatic updates","Check for updates","-","Screen","Bring to this screen","Send to other screen","-","Close"};
+            string[] expected={"Size","-","Options","Sit","Lay Down","Watch Mouse","Watch Window","-","Windows","Start with Windows","Automatic updates","Check for updates","-","Screen","Bring to this screen","Send to other screen","-","Close"};
             if(menu.Items.Count!=expected.Length)throw new Exception("Production menu item count differs.");
             for(int i=0;i<expected.Length;i++)if(expected[i]=="-"?!(menu.Items[i] is ToolStripSeparator):menu.Items[i].Text!=expected[i])throw new Exception("Production menu differs at "+i);
             Func<string,ToolStripMenuItem> find=delegate(string text){foreach(ToolStripItem item in menu.Items)if(item.Text==text)return (ToolStripMenuItem)item;throw new Exception("Missing production item: "+text);};int count=1;
             foreach(string text in new[]{"Sit","Lay Down"})
-            {find(text).PerformClick();if(!routine.Automatic)throw new Exception("Pose selection disabled autonomous sleep.");for(int i=0;i<30&&routine.InTransition;i++)routine.Step(.1,false);if(routine.Pose!=(text=="Sit"?"sit":"lay"))throw new Exception("Production pose failed.");count++;}
+            {find(text).PerformClick();if(!routine.Automatic)throw new Exception("Pose selection disabled autonomous sleep.");for(int i=0;i<30&&routine.InTransition;i++)routine.Step(.1,false);if(routine.Pose!=(text=="Sit"?"sit":"lay"))throw new Exception("Production pose failed.");count+=1+CheckWatchModeWiring(routine.Pose);}
+            routine.SetPose("sleep",true);
+            if(!routine.InTransition)throw new Exception("Watch transition test did not begin.");
+            UpdateActions();
+            if(watchMouseItem.Enabled||watchWindowItem.Enabled)throw new Exception("Watch was available during a transition.");
+            for(int i=0;i<30&&routine.InTransition;i++)routine.Step(.1,false);
+            UpdateActions();
+            if(routine.Pose!="sleep"||watchMouseItem.Enabled||watchWindowItem.Enabled)throw new Exception("Watch was available during sleep.");
+            count+=2;
             find("Start with Windows").PerformClick();if(!preferences.StartWithWindows)throw new Exception("Startup toggle failed.");find("Start with Windows").PerformClick();if(preferences.StartWithWindows)throw new Exception("Startup toggle restore failed.");count+=2;
             find("Automatic updates").PerformClick();if(preferences.AutoUpdates)throw new Exception("Automatic updates off failed.");find("Automatic updates").PerformClick();if(!preferences.AutoUpdates)throw new Exception("Automatic updates restore failed.");count+=2;
             find("Check for updates").PerformClick();if(requestedUpdateChecks!=1||updates!=null)throw new Exception("Headless update command isolation failed.");count++;
@@ -163,11 +177,40 @@ namespace Judge
             find("Bring to this screen").PerformClick();find("Send to other screen").PerformClick();count+=2;
             if(Visible||tray.Visible||IsHandleCreated)throw new Exception("Production menu checks opened UI.");return count;
         }
+        void AddWatchModes(ToolStripItemCollection items)
+        {
+            watchMouseItem=Add(items,"Watch Mouse",delegate{ToggleWatch(WatchMode.Mouse);});
+            watchWindowItem=Add(items,"Watch Window",delegate{ToggleWatch(WatchMode.Window);});
+        }
+        int CheckWatchModeWiring(string pose)
+        {
+            UpdateActions();
+            if(!watchMouseItem.Enabled||!watchWindowItem.Enabled)throw new Exception("Watch controls unavailable while awake.");
+            watchMouseItem.PerformClick();
+            if(watch.Mode!=WatchMode.Mouse||!watchMouseItem.Checked||watchWindowItem.Checked)throw new Exception("Watch Mouse wiring failed.");
+            watchWindowItem.PerformClick();
+            if(watch.Mode!=WatchMode.Window||watchMouseItem.Checked||!watchWindowItem.Checked)throw new Exception("Watch Window did not replace Watch Mouse.");
+            watchWindowItem.PerformClick();
+            if(watch.Mode!=WatchMode.Off||watchMouseItem.Checked||watchWindowItem.Checked||routine.Pose!=pose)throw new Exception("Watch toggle failed.");
+            return 3;
+        }
+        void ToggleWatch(WatchMode mode)
+        {
+            watch.Toggle(mode);
+            watchAt = 0;
+            watchedTarget = null;
+            UpdateActions();
+        }
         void UpdateActions()
         {
+            bool awake=!routine.Paused&&WatchGaze.IsAwake(routine.Pose)&&!routine.InTransition;
+            watchMouseItem.Enabled=watchWindowItem.Enabled=awake;
+            watchMouseItem.Checked=watch.Mode==WatchMode.Mouse;
+            watchWindowItem.Checked=watch.Mode==WatchMode.Window;
             if(actionMenu==null)return;
-            actionMenu.Enabled=!routine.Paused&&routine.Pose!="sleep"&&!routine.InTransition;
-            foreach(ToolStripMenuItem item in actionMenu.DropDownItems)item.Enabled=routine.CanAction((string)item.Tag,true);
+            actionMenu.Enabled=awake;
+            foreach(ToolStripMenuItem item in actionMenu.DropDownItems)
+                if(item.Tag is string)item.Enabled=routine.CanAction((string)item.Tag,true);
         }
         [DllImport("user32.dll")]static extern short GetAsyncKeyState(int key);
         static int MouseButtonsDown()
@@ -214,16 +257,49 @@ namespace Judge
         void Tick(object sender,EventArgs args)
         {
             double now=clock.Elapsed.TotalSeconds,dt=now-lastTick;lastTick=now;
-            PollMenu();routine.Step(dt,gesture.Pressed||inMenu||!Visible);
+            PollMenu();
+            bool blocked = gesture.Pressed || inMenu || !Visible;
+            routine.Step(dt,blocked);
             TickUpdates();
-            if(hoverSince>=0&&routine.Clock-hoverSince>.75&&!gesture.Pressed&&!inMenu){routine.ObserveHover();hoverSince=-1;}
+            if(watch.Mode==WatchMode.Off&&hoverSince>=0&&routine.Clock-hoverSince>.75&&!blocked){routine.ObserveHover();hoverSince=-1;}
+            UpdateWatch(now, blocked);
             if(Visible)PaintFrame();
             if(Visible&&now>=orderAt&&!inMenu&&!PresentedBounds.IsEmpty){orderAt=now+.25;TaskbarOrder.Check(Handle,process,PresentedBounds);}
+        }
+        void UpdateWatch(double now, bool blocked)
+        {
+            if (watch.Mode == WatchMode.Off) return;
+            if (blocked || routine.Paused)
+            {
+                watchAt = 0;
+                return;
+            }
+            if (!WatchGaze.IsAwake(routine.Pose) || routine.Action.Length != 0)
+            {
+                watchAt = 0;
+                watch.Step(now, routine.Pose, null, PointF.Empty, null, 0);
+                return;
+            }
+
+            if (watch.Mode == WatchMode.Mouse)
+                watchedTarget = Cursor.Position;
+            else if (now >= watchAt)
+            {
+                watchedTarget = WatchedWindow.Read(GetForegroundWindow(), process);
+                watchAt = now + .10;
+            }
+            double scale = placement.Scale(area, preferences.Size);
+            PointF support = new PointF((float)placement.Clamp(area, x, preferences.Size), area.Bottom);
+            RectangleF sprite = placement.Sprite(routine.Pose, support, scale);
+            FrameInfo baseFrame = art.Manifest.frames[routine.Pose];
+            PointF head = WatchGaze.HeadOnScreen(routine.Pose, sprite, new Size(baseFrame.width, baseFrame.height));
+            watch.Step(now, routine.Pose, routine.Frame, head, watchedTarget, Math.Max(10, sprite.Width * .045));
         }
         void PaintFrame()
         {
             if(!IsHandleCreated)return;x=placement.Clamp(area,x,preferences.Size);double scale=placement.Scale(area,preferences.Size);
-            string key=routine.Frame;PointF support=new PointF((float)x,area.Bottom);Point location;
+            string key=routine.Action.Length==0?watch.Frame(routine.Pose,routine.Frame):routine.Frame;
+            PointF support=new PointF((float)x,area.Bottom);Point location;
             Rectangle scene=placement.Scene(key,support,scale);
             if(key==drawn&&scene.Location==drawnPoint&&scale==drawnScale)return;
             Bitmap image=placement.Paint(key,support,scale,out location);Present(image,location);
@@ -251,6 +327,7 @@ namespace Judge
             foreach(string state in new[]{"Sitting","Lying awake"})
             {
                 find(states,state).PerformClick();for(int tick=0;tick<20&&routine.InTransition;tick++)routine.Step(.1,false);string expected=state=="Sitting"?"sit":"lay";
+                count+=CheckWatchModeWiring(expected);
                 foreach(string label in new[]{"Blink","Head tilt","Cheesy smile","Nose lick"})
                 {
                     UpdateActions();ToolStripMenuItem item=find(actionMenu.DropDownItems,label);if(!item.Enabled||!actionMenu.Enabled)throw new Exception("Awake action missing: "+state+" / "+label);

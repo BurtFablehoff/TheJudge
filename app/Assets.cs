@@ -11,6 +11,8 @@ namespace Judge
     {
         public string file,sha256;public int width,height;public int[] bounds;
         public double scale,supportX,supportY,bodyAnchorX;public bool draft,hasBodyAnchor;
+        public double? bodyFloorY;
+        public int[] bodyFloorBand;
         public Rectangle Bounds{get{return Rectangle.FromLTRB(bounds[0],bounds[1],bounds[2],bounds[3]);}}
     }
     public sealed class ClipInfo
@@ -32,6 +34,10 @@ namespace Judge
         {
             using(Stream stream=Open("Judge.Manifest"))using(StreamReader reader=new StreamReader(stream))
                 Manifest=new JavaScriptSerializer().Deserialize<ArtManifest>(reader.ReadToEnd());
+            using (Stream stream = Open("Judge.Gaze"))
+            using (StreamReader reader = new StreamReader(stream))
+                foreach (var pair in new JavaScriptSerializer().Deserialize<Dictionary<string,FrameInfo>>(reader.ReadToEnd()))
+                    Manifest.frames.Add(pair.Key, pair.Value);
         }
         internal static Stream Open(string resource)
         {Stream result=Assembly.GetExecutingAssembly().GetManifestResourceStream(resource);if(result==null)throw new InvalidDataException("Missing embedded resource: "+resource);return result;}

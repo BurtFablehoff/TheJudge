@@ -1,12 +1,12 @@
 #ifndef ProductionExecutable
-  #define ProductionExecutable "..\test-exes\TheJudge.exe"
+  #define ProductionExecutable "..\build\release-0.1.8\TheJudge.exe"
 #endif
 
 [Setup]
 AppId={{A967887A-7911-43EA-BC40-ABF89FF3E4D5}
 AppName=The Judge
-AppVersion=0.1.7
-AppVerName=The Judge 0.1.7
+AppVersion=0.1.8
+AppVerName=The Judge 0.1.8
 AppPublisher=BurtFablehoff
 AppPublisherURL=https://github.com/BurtFablehoff/TheJudge
 AppSupportURL=https://github.com/BurtFablehoff/TheJudge/issues
@@ -23,12 +23,12 @@ CloseApplications=yes
 RestartApplications=no
 UninstallDisplayName=The Judge
 UninstallDisplayIcon={app}\TheJudge.exe
-OutputDir=..\build\release
-OutputBaseFilename=TheJudge-Setup-0.1.7
+OutputDir=..\build\release-0.1.8
+OutputBaseFilename=TheJudge-Setup-0.1.8
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
-VersionInfoVersion=0.1.7.0
+VersionInfoVersion=0.1.8.0
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription: "Additional shortcuts:"; Flags: unchecked
